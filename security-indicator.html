@@ -8,23 +8,23 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
 
 		<!-- App css -->
-		<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
-		<link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
-		<link href="../assets/css/kendo-ui.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+		<link href="assets/css/app.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+		<link href="assets/css/kendo-ui.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
 
-		<link href="../assets/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
-		<link href="../assets/css/app-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
-		<link href="../assets/css/kendo-ui-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+		<link href="assets/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+		<link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+		<link href="assets/css/kendo-ui-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
 
 		<!-- icons -->
-		<link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
-    <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "condensed", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+    <body class="loading">
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -43,7 +43,7 @@
                             <div class="dropdown-menu dropdown-lg dropdown-menu-right p-2">
                                 <form>
                                     <div class="form-group">
-                                        <label for="organization-select">Organization</label>
+                                        <label for="organization-select" class="font-weight-normal">Organization</label>
                                         <select class="custom-select text-truncate" id="organization-select">
                                             <option>Taipei</option>
                                             <option>Hsinchu</option>
@@ -53,7 +53,7 @@
 
                                 <form>
                                     <div class="form-group">
-                                        <label for="site-select">Site</label>
+                                        <label for="site-select font-weight-normal" class="font-weight-normal">Site</label>
                                         <select class="custom-select text-truncate" id="site-select">
                                             <option>Zyxel</option>
                                             <option>Long Long Long Long Long Site Name</option>
@@ -87,7 +87,7 @@
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item active">
                                         <div class="notify-icon">
-                                            <img src="../assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                         <p class="notify-details">Cristina Pride</p>
                                         <p class="text-muted mb-0 user-msg">
                                             <small>Hi, How are you? What about our next meeting</small>
@@ -107,7 +107,7 @@
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                                         <div class="notify-icon">
-                                            <img src="../assets/images/users/user-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <img src="assets/images/users/user-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                         <p class="notify-details">Karen Robinson</p>
                                         <p class="text-muted mb-0 user-msg">
                                             <small>Wow ! this admin looks good and awesome design</small>
@@ -154,46 +154,24 @@
     
                             </div>
                         </li>
-    
+
                         <li class="dropdown notification-list topbar-dropdown">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <i class="fe-user noti-icon"></i>
-                                <span class="d-none d-xl-inline-block ml-1">
-                                    Geneva <i class="mdi mdi-chevron-down"></i> 
-                                </span>
+                                <i class="fe-settings noti-icon"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
                                 <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                                    <h5 class="text-overflow m-0">Preference</h5>
                                 </div>
-    
+
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-user"></i>
-                                    <span>My Account</span>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" name="color-scheme-mode" id="dark-mode-check">
+                                        <label class="custom-control-label font-weight-normal" for="dark-mode-check"><i class="fe-moon"></i>Dark Mode</label>
+                                    </div>
                                 </a>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-settings"></i>
-                                    <span>Settings</span>
-                                </a>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-lock"></i>
-                                    <span>Lock Screen</span>
-                                </a>
-    
-                                <div class="dropdown-divider"></div>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-log-out"></i>
-                                    <span>Logout</span>
-                                </a>
-    
                             </div>
                         </li>
 
@@ -204,7 +182,7 @@
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                                 <!-- item-->
                                 <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Help</h6>
+                                    <h5 class="text-overflow m-0">Help</h5>
                                 </div>
     
                                 <!-- item-->
@@ -219,11 +197,45 @@
     
                             </div>
                         </li>
-    
-                        <li class="dropdown d-none d-lg-inline-block topbar-dropdown">
-                            <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
-                                <i class="fe-settings noti-icon"></i>
+
+                        <li class="dropdown notification-list topbar-dropdown">
+                            <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">            
+                                <span class="bg-soft-secondary text-secondary rounded-circle p-1 user-select-none">MD</span>
                             </a>
+
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                                </div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-user"></i>
+                                    <span>My Account</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-settings"></i>
+                                    <span>Settings</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-lock"></i>
+                                    <span>Lock Screen</span>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-log-out"></i>
+                                    <span>Logout</span>
+                                </a>
+
+                            </div>
                         </li>
 
                         <li class="dropdown notification-list topbar-dropdown">
@@ -236,19 +248,19 @@
                                     <div class="row no-gutters">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/slack.png" alt="slack">
+                                                <img src="assets/images/brands/slack.png" alt="slack">
                                                 <span>Slack</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/github.png" alt="Github">
+                                                <img src="assets/images/brands/github.png" alt="Github">
                                                 <span>GitHub</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/dribbble.png" alt="dribbble">
+                                                <img src="assets/images/brands/dribbble.png" alt="dribbble">
                                                 <span>Dribbble</span>
                                             </a>
                                         </div>
@@ -257,19 +269,19 @@
                                     <div class="row no-gutters">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/bitbucket.png" alt="bitbucket">
+                                                <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
                                                 <span>Bitbucket</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/dropbox.png" alt="dropbox">
+                                                <img src="assets/images/brands/dropbox.png" alt="dropbox">
                                                 <span>Dropbox</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/g-suite.png" alt="G Suite">
+                                                <img src="assets/images/brands/g-suite.png" alt="G Suite">
                                                 <span>G Suite</span>
                                             </a>
                                         </div>
@@ -286,21 +298,21 @@
                     <div class="logo-box">
                         <a href="index.html" class="logo logo-dark text-center">
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.svg" alt="" height="36">
+                                <img src="assets/images/logo-sm.svg" alt="" height="36">
                                 <!-- <span class="logo-lg-text-light">UBold</span> -->
                             </span>
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-dark.svg" alt="" height="36">
+                                <img src="assets/images/logo-dark.svg" alt="" height="36">
                                 <!-- <span class="logo-lg-text-light">U</span> -->
                             </span>
                         </a>
     
                         <a href="index.html" class="logo logo-light text-center">
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.svg" alt="" height="36">
+                                <img src="assets/images/logo-sm.svg" alt="" height="36">
                             </span>
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-light.svg" alt="" height="36">
+                                <img src="assets/images/logo-light.svg" alt="" height="36">
                             </span>
                         </a>
                     </div>
@@ -324,20 +336,22 @@
                             <!-- End mobile menu toggle-->
                         </li>   
             
-                        <li class="d-none d-md-block nav-link">
+                        <li class="d-none d-md-inline-block nav-link">
                             <form class="form-inline">
-                                <label class="mr-1" for="organization-select" class="formin">Organization</label>
+                                <label for="organization-select" class="mr-1 font-weight-normal">Organization</label>
                                 <select class="custom-select text-truncate org-select" id="organization-select">
                                     <option>Taipei</option>
                                     <option>Hsinchu</option>
                                 </select>
 
-                                <label for="site-select" class="mr-1 ml-2">Site</label>
+                                <label for="site-select" class="mr-1 ml-2 font-weight-normal">Site</label>
                                 <select class="custom-select text-truncate site-select" id="site-select">
                                     <option>Zyxel</option>
                                     <option>Long Long Long Long Long Site Name</option>
                                 </select>
+
                             </form>
+
                         </li>
             
                     </ul>
@@ -356,7 +370,7 @@
 
                         <ul id="side-menu">
                             <li>
-                                <a href="/">
+                                <a href="index.html">
                                     <i data-feather="home"></i>
                                     <span> Home </span>
                                 </a>
@@ -418,21 +432,6 @@
 
                     <!-- Start Content-->
                     <div class="container-fluid">
-
-                        <div class="row mt-3">
-                            <div class="col">
-                                <div class="float-right">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary d-xl-none float-right" id="date-range-picker-icon">
-                                        <i class="mdi mdi-calendar"></i>
-                                    </button>
-                                    <div class="d-none d-xl-block" style="width:150px">
-                                        <button type="button" class="btn btn-block btn-sm btn-outline-secondary d-flex justify-content-between" id="date-range-picker">
-                                            <span>Last 24 Hours</span><i class="mdi mdi-chevron-down"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         
                         <div class="row">
                             <div class="col text-center h4">Security Indicator</div>
@@ -444,46 +443,319 @@
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-tabs nav-bordered flex-column flex-md-row" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#home">ADP</a>
+                                            <a class="nav-link active" data-toggle="tab" href="#panel-adp">ADP</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#menu1">Virus / Malware</a>
+                                            <a class="nav-link" data-toggle="tab" href="#panel-virus-malware">Virus / Malware</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#menu2">IDP</a>
+                                            <a class="nav-link" data-toggle="tab" href="#panel-idp">IDP</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#menu2">Email Spam</a>
+                                            <a class="nav-link" data-toggle="tab" href="#panel-email-spam">Email Spam</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#menu2">URL Threat Filter</a>
+                                            <a class="nav-link" data-toggle="tab" href="#panel-url-threat-filter">URL Threat Filter</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#menu2">Threat IP</a>
+                                            <a class="nav-link" data-toggle="tab" href="#panel-threat-ip">Threat IP</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#menu2">Sandboxing</a>
+                                            <a class="nav-link" data-toggle="tab" href="#panel-sandboxing">Sandboxing</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#menu2">DNS Filter</a>
+                                            <a class="nav-link" data-toggle="tab" href="#panel-dns-filter">DNS Filter</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#menu2">Application</a>
+                                            <a class="nav-link" data-toggle="tab" href="#panel-applicatation">Application</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#menu2">Website</a>
+                                            <a class="nav-link" data-toggle="tab" href="#panel-website">Website</a>
                                         </li>
                                     </ul>
                                     
                                     <!-- Tab panes -->
                                     <div class="tab-content">
-                                        <div id="home" class="container tab-pane active"><br>
-                                        <h3>HOME</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div id="panel-adp" class="container-fluid tab-pane active"><br>
+
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <div class="float-right">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary d-xl-none float-right" id="date-range-picker-icon">
+                                                            <i class="mdi mdi-calendar"></i>
+                                                        </button>
+                                                        <div class="d-none d-xl-block" style="width:150px">
+                                                            <button type="button" class="btn btn-block btn-sm btn-outline-secondary d-flex justify-content-between" id="date-range-picker">
+                                                                <span>Last 24 Hours</span><i class="mdi mdi-chevron-down"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="card flex-fill">
+                                                        <div class="card-header rounded-top">ADP Trend (Hits)
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="chart-wrapper">
+                                                                <div id="chart"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 d-flex">
+                                                    <div class="card flex-fill">
+                                                        <div class="card-header rounded-top">Top Signature Type
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <!-- Stacked Progress Bar -->
+                                                            <div class="row">
+                                                                <div class="col-12 px-0">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 98%; background-color: #960000;" aria-valuenow="98" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                        <div class="progress-bar" role="progressbar" style="width: 2%; background-color: #BB2700;" aria-valuenow="2" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Item Detail -->
+
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">Flood Detection</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(98%)</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">Crush Detection</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(2%)</span>
+                                                                        </div>
+                                                                    </div>
+                
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 d-flex">
+                                                    <div class="card flex-fill">
+                                                        <div class="card-header rounded-top">Top Event Severity Type
+                                                        </div>
+                                                        <div class="card-body">
+
+                                                            <!-- Stacked Progress Bar -->
+                                                            <div class="row">
+                                                                <div class="col-12 px-0">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 70%; background-color: #FF8900;" aria-valuenow="70" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                        <div class="progress-bar" role="progressbar" style="width: 20%; background-color: #FFB866;" aria-valuenow="20" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                        <div class="progress-bar" role="progressbar" style="width: 10%; background-color: #FFD099;" aria-valuenow="10" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Item Detail -->
+
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">Moderate</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(70%)</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">Cautious</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(20%)</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">Critical</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(10%)</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 d-flex">
+                                                    <div class="card flex-fill">
+                                                        <div class="card-header rounded-top">Top Source IP
+                                                        </div>
+                                                        <div class="card-body">
+
+                                                            <!-- Stacked Progress Bar -->
+                                                            <div class="row">
+                                                                <div class="col-12 px-0">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 80%; background-color: #003EAB;" aria-valuenow="80" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                        <div class="progress-bar" role="progressbar" style="width: 20%; background-color: #0079FF;" aria-valuenow="20" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Item Detail -->
+
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">192.168.1.33</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(80%)</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">99.1.7.12</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(20%)</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 d-flex">
+                                                    <div class="card flex-fill">
+                                                        <div class="card-header rounded-top">Top Destination IP
+                                                        </div>
+                                                        <div class="card-body">
+
+                                                            <!-- Stacked Progress Bar -->
+                                                            <div class="row">
+                                                                <div class="col-12 px-0">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 70%; background-color: #004600;" aria-valuenow="70" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                        <div class="progress-bar" role="progressbar" style="width: 20%; background-color: #147400;" aria-valuenow="20" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                        <div class="progress-bar" role="progressbar" style="width: 5%; background-color: #3C9F00;" aria-valuenow="5" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                        <div class="progress-bar" role="progressbar" style="width: 5%; background-color: #64BE00;" aria-valuenow="5" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Item Detail -->
+
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">192.168.1.33</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(70%)</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">99.1.7.12</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(20%)</span>
+                                                                        </div>
+                                                                    </div>
+
+
+
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">99.1.7.55</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(5%)</span>
+                                                                        </div>
+                                                                    </div>
+
+
+
+                                                                    <div class="d-flex justify-content-between mt-2">
+                                                                        <div>
+                                                                            <i class="mdi mdi-checkbox-blank text-warning"></i>
+                                                                            <span class="h6">78.1.7.12</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span class="h6">(5%)</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div id="grid"></div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div id="menu1" class="container tab-pane fade"><br>
-                                        <h3>Menu 1</h3>
-                                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div id="panel-virus-malware" class="container-fluid tab-pane fade"><br>
+                                            <h3>Virus / Malware</h3>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                        </div>
+                                        <div id="panel-idp" class="container-fluid tab-pane fade"><br>
+                                            <h3>IDP</h3>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                        </div>
+                                        <div id="panel-email-spam" class="container-fluid tab-pane fade"><br>
+                                            <h3>Email Spam</h3>
+                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                         </div>
                                         <div id="menu2" class="container tab-pane fade"><br>
                                         <h3>Menu 2</h3>
@@ -591,7 +863,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -606,7 +878,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -621,7 +893,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -640,7 +912,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -655,7 +927,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -670,7 +942,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -685,7 +957,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -700,7 +972,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -715,7 +987,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -927,10 +1199,13 @@
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor js -->
-        <script src="../assets/js/vendor.min.js"></script>
+        <script src="assets/js/vendor.min.js"></script>
 
         <!-- App js -->
-        <script src="../assets/js/app.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- Init js-->
+        <script src="assets/js/pages/security-indicator.init.js"></script>
         
     </body>
 </html>

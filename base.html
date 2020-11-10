@@ -8,19 +8,19 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
 
 		<!-- App css -->
-		<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
-		<link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
-		<link href="../assets/css/kendo-ui.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+		<link href="assets/css/app.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+		<link href="assets/css/kendo-ui.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
 
-		<link href="../assets/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
-		<link href="../assets/css/app-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
-		<link href="../assets/css/kendo-ui-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+		<link href="assets/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+		<link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+		<link href="assets/css/kendo-ui-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
 
 		<!-- icons -->
-		<link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -43,7 +43,7 @@
                             <div class="dropdown-menu dropdown-lg dropdown-menu-right p-2">
                                 <form>
                                     <div class="form-group">
-                                        <label for="organization-select">Organization</label>
+                                        <label for="organization-select" class="font-weight-normal">Organization</label>
                                         <select class="custom-select text-truncate" id="organization-select">
                                             <option>Taipei</option>
                                             <option>Hsinchu</option>
@@ -53,7 +53,7 @@
 
                                 <form>
                                     <div class="form-group">
-                                        <label for="site-select">Site</label>
+                                        <label for="site-select font-weight-normal" class="font-weight-normal">Site</label>
                                         <select class="custom-select text-truncate" id="site-select">
                                             <option>Zyxel</option>
                                             <option>Long Long Long Long Long Site Name</option>
@@ -87,7 +87,7 @@
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item active">
                                         <div class="notify-icon">
-                                            <img src="../assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                         <p class="notify-details">Cristina Pride</p>
                                         <p class="text-muted mb-0 user-msg">
                                             <small>Hi, How are you? What about our next meeting</small>
@@ -107,7 +107,7 @@
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                                         <div class="notify-icon">
-                                            <img src="../assets/images/users/user-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <img src="assets/images/users/user-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                         <p class="notify-details">Karen Robinson</p>
                                         <p class="text-muted mb-0 user-msg">
                                             <small>Wow ! this admin looks good and awesome design</small>
@@ -154,46 +154,24 @@
     
                             </div>
                         </li>
-    
+
                         <li class="dropdown notification-list topbar-dropdown">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <i class="fe-user noti-icon"></i>
-                                <span class="d-none d-xl-inline-block ml-1">
-                                    Geneva <i class="mdi mdi-chevron-down"></i> 
-                                </span>
+                                <i class="fe-settings noti-icon"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
                                 <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                                    <h5 class="text-overflow m-0">Preference</h5>
                                 </div>
-    
+
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-user"></i>
-                                    <span>My Account</span>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" name="color-scheme-mode" id="dark-mode-check">
+                                        <label class="custom-control-label font-weight-normal" for="dark-mode-check"><i class="fe-moon"></i>Dark Mode</label>
+                                    </div>
                                 </a>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-settings"></i>
-                                    <span>Settings</span>
-                                </a>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-lock"></i>
-                                    <span>Lock Screen</span>
-                                </a>
-    
-                                <div class="dropdown-divider"></div>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-log-out"></i>
-                                    <span>Logout</span>
-                                </a>
-    
                             </div>
                         </li>
 
@@ -204,7 +182,7 @@
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                                 <!-- item-->
                                 <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Help</h6>
+                                    <h5 class="text-overflow m-0">Help</h5>
                                 </div>
     
                                 <!-- item-->
@@ -219,11 +197,45 @@
     
                             </div>
                         </li>
-    
-                        <li class="dropdown d-none d-lg-inline-block topbar-dropdown">
-                            <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
-                                <i class="fe-settings noti-icon"></i>
+
+                        <li class="dropdown notification-list topbar-dropdown">
+                            <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">            
+                                <span class="bg-soft-secondary text-secondary rounded-circle p-1 user-select-none">MD</span>
                             </a>
+
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                                </div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-user"></i>
+                                    <span>My Account</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-settings"></i>
+                                    <span>Settings</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-lock"></i>
+                                    <span>Lock Screen</span>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-log-out"></i>
+                                    <span>Logout</span>
+                                </a>
+
+                            </div>
                         </li>
 
                         <li class="dropdown notification-list topbar-dropdown">
@@ -236,19 +248,19 @@
                                     <div class="row no-gutters">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/slack.png" alt="slack">
+                                                <img src="assets/images/brands/slack.png" alt="slack">
                                                 <span>Slack</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/github.png" alt="Github">
+                                                <img src="assets/images/brands/github.png" alt="Github">
                                                 <span>GitHub</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/dribbble.png" alt="dribbble">
+                                                <img src="assets/images/brands/dribbble.png" alt="dribbble">
                                                 <span>Dribbble</span>
                                             </a>
                                         </div>
@@ -257,19 +269,19 @@
                                     <div class="row no-gutters">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/bitbucket.png" alt="bitbucket">
+                                                <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
                                                 <span>Bitbucket</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/dropbox.png" alt="dropbox">
+                                                <img src="assets/images/brands/dropbox.png" alt="dropbox">
                                                 <span>Dropbox</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/g-suite.png" alt="G Suite">
+                                                <img src="assets/images/brands/g-suite.png" alt="G Suite">
                                                 <span>G Suite</span>
                                             </a>
                                         </div>
@@ -286,21 +298,21 @@
                     <div class="logo-box">
                         <a href="index.html" class="logo logo-dark text-center">
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.svg" alt="" height="36">
+                                <img src="assets/images/logo-sm.svg" alt="" height="36">
                                 <!-- <span class="logo-lg-text-light">UBold</span> -->
                             </span>
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-dark.svg" alt="" height="36">
+                                <img src="assets/images/logo-dark.svg" alt="" height="36">
                                 <!-- <span class="logo-lg-text-light">U</span> -->
                             </span>
                         </a>
     
                         <a href="index.html" class="logo logo-light text-center">
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.svg" alt="" height="36">
+                                <img src="assets/images/logo-sm.svg" alt="" height="36">
                             </span>
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-light.svg" alt="" height="36">
+                                <img src="assets/images/logo-light.svg" alt="" height="36">
                             </span>
                         </a>
                     </div>
@@ -324,20 +336,22 @@
                             <!-- End mobile menu toggle-->
                         </li>   
             
-                        <li class="d-none d-md-block nav-link">
+                        <li class="d-none d-md-inline-block nav-link">
                             <form class="form-inline">
-                                <label class="mr-1" for="organization-select" class="formin">Organization</label>
+                                <label for="organization-select" class="mr-1 font-weight-normal">Organization</label>
                                 <select class="custom-select text-truncate org-select" id="organization-select">
                                     <option>Taipei</option>
                                     <option>Hsinchu</option>
                                 </select>
 
-                                <label for="site-select" class="mr-1 ml-2">Site</label>
+                                <label for="site-select" class="mr-1 ml-2 font-weight-normal">Site</label>
                                 <select class="custom-select text-truncate site-select" id="site-select">
                                     <option>Zyxel</option>
                                     <option>Long Long Long Long Long Site Name</option>
                                 </select>
+
                             </form>
+
                         </li>
             
                     </ul>
@@ -356,7 +370,7 @@
 
                         <ul id="side-menu">
                             <li>
-                                <a href="/">
+                                <a href="index.html">
                                     <i data-feather="home"></i>
                                     <span> Home </span>
                                 </a>
@@ -517,7 +531,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -532,7 +546,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -547,7 +561,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -566,7 +580,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -581,7 +595,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -596,7 +610,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -611,7 +625,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -626,7 +640,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -641,7 +655,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -853,10 +867,10 @@
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor js -->
-        <script src="../assets/js/vendor.min.js"></script>
+        <script src="assets/js/vendor.min.js"></script>
 
         <!-- App js -->
-        <script src="../assets/js/app.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
         
     </body>
 </html>

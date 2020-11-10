@@ -8,26 +8,28 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../assets/images/favicon.ico"> 
-
-        <!-- App css -->
-        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
-        <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
-        <link href="../assets/css/kendo-ui.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
-
-        <link href="../assets/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
-        <link href="../assets/css/app-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
-        <link href="../assets/css/kendo-ui-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
-
-        <!-- icons -->
-        <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="assets/images/favicon.ico"> 
 
         <!-- plugin css -->
-        <link href="../assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
-        <link href="../assets/libs/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/flag-icon-css/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+        <link href="assets/css/kendo-ui.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+
+        <link href="assets/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+        <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+        <link href="assets/css/kendo-ui-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+
+        <!-- icons -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        
     </head>
 
-    <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "condensed", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+    <body class="loading">
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -46,7 +48,7 @@
                             <div class="dropdown-menu dropdown-lg dropdown-menu-right p-2">
                                 <form>
                                     <div class="form-group">
-                                        <label for="organization-select">Organization</label>
+                                        <label for="organization-select" class="font-weight-normal">Organization</label>
                                         <select class="custom-select text-truncate" id="organization-select">
                                             <option>Taipei</option>
                                             <option>Hsinchu</option>
@@ -56,7 +58,7 @@
 
                                 <form>
                                     <div class="form-group">
-                                        <label for="site-select">Site</label>
+                                        <label for="site-select font-weight-normal" class="font-weight-normal">Site</label>
                                         <select class="custom-select text-truncate" id="site-select">
                                             <option>Zyxel</option>
                                             <option>Long Long Long Long Long Site Name</option>
@@ -90,7 +92,7 @@
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item active">
                                         <div class="notify-icon">
-                                            <img src="../assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                         <p class="notify-details">Cristina Pride</p>
                                         <p class="text-muted mb-0 user-msg">
                                             <small>Hi, How are you? What about our next meeting</small>
@@ -110,7 +112,7 @@
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                                         <div class="notify-icon">
-                                            <img src="../assets/images/users/user-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <img src="assets/images/users/user-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                         <p class="notify-details">Karen Robinson</p>
                                         <p class="text-muted mb-0 user-msg">
                                             <small>Wow ! this admin looks good and awesome design</small>
@@ -157,46 +159,24 @@
     
                             </div>
                         </li>
-    
+
                         <li class="dropdown notification-list topbar-dropdown">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <i class="fe-user noti-icon"></i>
-                                <span class="d-none d-xl-inline-block ml-1">
-                                    Geneva <i class="mdi mdi-chevron-down"></i> 
-                                </span>
+                                <i class="fe-settings noti-icon"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
                                 <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                                    <h5 class="text-overflow m-0">Preference</h5>
                                 </div>
-    
+
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-user"></i>
-                                    <span>My Account</span>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" name="color-scheme-mode" id="dark-mode-check">
+                                        <label class="custom-control-label font-weight-normal" for="dark-mode-check"><i class="fe-moon"></i>Dark Mode</label>
+                                    </div>
                                 </a>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-settings"></i>
-                                    <span>Settings</span>
-                                </a>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-lock"></i>
-                                    <span>Lock Screen</span>
-                                </a>
-    
-                                <div class="dropdown-divider"></div>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-log-out"></i>
-                                    <span>Logout</span>
-                                </a>
-    
                             </div>
                         </li>
 
@@ -207,7 +187,7 @@
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                                 <!-- item-->
                                 <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Help</h6>
+                                    <h5 class="text-overflow m-0">Help</h5>
                                 </div>
     
                                 <!-- item-->
@@ -222,11 +202,45 @@
     
                             </div>
                         </li>
-    
-                        <li class="dropdown d-none d-lg-inline-block topbar-dropdown">
-                            <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
-                                <i class="fe-settings noti-icon"></i>
+
+                        <li class="dropdown notification-list topbar-dropdown">
+                            <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">            
+                                <span class="bg-soft-secondary text-secondary rounded-circle p-1 user-select-none">MD</span>
                             </a>
+
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                                </div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-user"></i>
+                                    <span>My Account</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-settings"></i>
+                                    <span>Settings</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-lock"></i>
+                                    <span>Lock Screen</span>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-log-out"></i>
+                                    <span>Logout</span>
+                                </a>
+
+                            </div>
                         </li>
 
                         <li class="dropdown notification-list topbar-dropdown">
@@ -239,19 +253,19 @@
                                     <div class="row no-gutters">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/slack.png" alt="slack">
+                                                <img src="assets/images/brands/slack.png" alt="slack">
                                                 <span>Slack</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/github.png" alt="Github">
+                                                <img src="assets/images/brands/github.png" alt="Github">
                                                 <span>GitHub</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/dribbble.png" alt="dribbble">
+                                                <img src="assets/images/brands/dribbble.png" alt="dribbble">
                                                 <span>Dribbble</span>
                                             </a>
                                         </div>
@@ -260,19 +274,19 @@
                                     <div class="row no-gutters">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/bitbucket.png" alt="bitbucket">
+                                                <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
                                                 <span>Bitbucket</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/dropbox.png" alt="dropbox">
+                                                <img src="assets/images/brands/dropbox.png" alt="dropbox">
                                                 <span>Dropbox</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/g-suite.png" alt="G Suite">
+                                                <img src="assets/images/brands/g-suite.png" alt="G Suite">
                                                 <span>G Suite</span>
                                             </a>
                                         </div>
@@ -289,21 +303,21 @@
                     <div class="logo-box">
                         <a href="index.html" class="logo logo-dark text-center">
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.svg" alt="" height="36">
+                                <img src="assets/images/logo-sm.svg" alt="" height="36">
                                 <!-- <span class="logo-lg-text-light">UBold</span> -->
                             </span>
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-dark.svg" alt="" height="36">
+                                <img src="assets/images/logo-dark.svg" alt="" height="36">
                                 <!-- <span class="logo-lg-text-light">U</span> -->
                             </span>
                         </a>
     
                         <a href="index.html" class="logo logo-light text-center">
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.svg" alt="" height="36">
+                                <img src="assets/images/logo-sm.svg" alt="" height="36">
                             </span>
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-light.svg" alt="" height="36">
+                                <img src="assets/images/logo-light.svg" alt="" height="36">
                             </span>
                         </a>
                     </div>
@@ -327,20 +341,22 @@
                             <!-- End mobile menu toggle-->
                         </li>   
             
-                        <li class="d-none d-md-block nav-link">
+                        <li class="d-none d-md-inline-block nav-link">
                             <form class="form-inline">
-                                <label class="mr-1" for="organization-select" class="formin">Organization</label>
+                                <label for="organization-select" class="mr-1 font-weight-normal">Organization</label>
                                 <select class="custom-select text-truncate org-select" id="organization-select">
                                     <option>Taipei</option>
                                     <option>Hsinchu</option>
                                 </select>
 
-                                <label for="site-select" class="mr-1 ml-2">Site</label>
+                                <label for="site-select" class="mr-1 ml-2 font-weight-normal">Site</label>
                                 <select class="custom-select text-truncate site-select" id="site-select">
                                     <option>Zyxel</option>
                                     <option>Long Long Long Long Long Site Name</option>
                                 </select>
+
                             </form>
+
                         </li>
             
                     </ul>
@@ -359,7 +375,7 @@
 
                         <ul id="side-menu">
                             <li>
-                                <a href="/">
+                                <a href="index.html">
                                     <i data-feather="home"></i>
                                     <span> Home </span>
                                 </a>
@@ -418,137 +434,683 @@
 
             <div class="content-page px-0">
                 <div class="content">
-    
+                
                     <!-- Start Content-->
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-7 col-md-12 d-flex p-0">
-                                <div class="card flex-fill bg-light mb-0">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-6 px-1">
-                                                <h4 class="header-title mb-3">Security Indicator</h4>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-6 d-flex">
+                                        <div class="card flex-fill">
+                                            <div class="card-header">Alert Detected
                                             </div>
-                                            <div class="col-6 px-1">
-                                                <div class="d-flex float-right">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary d-xl-none" id="security-indicator-date-range-picker-icon">
-                                                        <i class="mdi mdi-calendar"></i>
-                                                    </button>
-                                                    <div class="d-none d-xl-block" style="width:150px">
-                                                        <button type="button" class="btn btn-block btn-sm btn-outline-secondary d-flex justify-content-between" id="security-indicator-date-range-picker">
-                                                            <span>Last 24 Hours</span><i class="mdi mdi-chevron-down"></i>
+                                            <div class="card-body">
+
+                                                <!-- Stacked Progress Bar -->
+                                                <div class="row">
+                                                    <div class="col text-center">
+                                                        <span class="h2 mr-1 text-danger">15</span> 
+                                                        <span class="text-danger">Alerts Detected in 7 Days</span> 
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 d-flex">
+                                        <div class="card flex-fill">
+                                            <div class="card-header">License Status
+                                            </div>
+                                            <div class="card-body">
+
+                                                <!-- Stacked Progress Bar -->
+                                                <div class="row">
+                                                    <div class="col text-center">
+                                                        <span class="h2 mr-1 text-danger">
+                                                            <i class="fe-clock"></i>
+                                                        </span> 
+                                                        <span class="text-danger">Expiring Soon - 30 Days Remaining</span> 
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-header">Security Indicator
+                                                <div class="card-widgets">
+                                                    <div class="d-flex">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary d-xl-none" id="security-indicator-date-range-picker-icon">
+                                                            <i class="mdi mdi-calendar"></i>
+                                                        </button>
+                                                        <div class="d-none d-xl-block" style="width:150px">
+                                                            <button type="button" class="btn btn-block btn-sm btn-outline-secondary d-flex justify-content-between" id="security-indicator-date-range-picker">
+                                                                <span>Last 24 Hours</span><i class="mdi mdi-chevron-down"></i>
+                                                            </button>
+                                                        </div>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary ml-1">
+                                                            <i class="mdi mdi-chevron-double-right"></i>
                                                         </button>
                                                     </div>
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary ml-1">
-                                                        <i class="mdi mdi-chevron-double-right"></i>
-                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+        
+                                                <div class="row">
+                                                    <div class="col-xl-3 col-lg-6 col-md-12 px-1">
+                                                        <div class="card" data-toggle="modal" data-target="#security-indicator-right-modal" data-indicator="ADP">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-12 align-self-center" style="height: 60px"><h1 class="text-center text-danger"><span>1065</span></h1></div>
+                                                                </div>
+                                                                <div class="row" style="height: 40px">
+                                                                    <div class="col-12"><h5 class="text-center text-danger">ADP Hits</h5></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-6 col-md-12 px-1">
+                                                        <div class="card" data-toggle="modal" data-target="#security-indicator-right-modal" data-indicator="IDP">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-12 align-self-center" style="height: 60px"><h1 class="text-center text-danger">2</h1></div>
+                                                                </div>
+                                                                <div class="row" style="height: 40px">
+                                                                    <div class="col-12"><h5 class="text-center text-danger">IDP Hits</h5></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-6 col-md-12 px-1">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="row align-items-center" style="height: 60px">
+                                                                    <div class="col-12"><h6 class="text-center text-muted">ATP & USG Flex Only</h6></div>
+                                                                </div>
+                                                                <div class="row" style="height: 40px">
+                                                                    <div class="col-12"><h5 class="text-center text-muted">URL Threat Hits</h5></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-6 col-md-12 px-1">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="row align-items-center" style="height: 60px">
+                                                                    <div class="col-12"><h6 class="text-center text-muted">ATP Only</h6></div>
+                                                                </div>
+                                                                <div class="row" style="height: 40px">
+                                                                    <div class="col-12"><h5 class="text-center text-muted">Sandboxing Alerts</h5></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xl-3 col-lg-6 col-md-12 px-1">
+                                                        <div class="card" data-toggle="modal" data-target="#security-indicator-right-modal" data-indicator="AV">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-12 align-self-center" style="height: 60px"><h1 class="text-center text-danger"><span>569</span></h1></div>
+                                                                </div>
+                                                                <div class="row" style="height: 40px">
+                                                                    <div class="col-12"><h5 class="text-center text-danger">Virus / Malware Hits</h5></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-6 col-md-12 px-1">
+                                                        <div class="card" data-toggle="modal" data-target="#security-indicator-right-modal" data-indicator="AS">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-12 align-self-center" style="height: 60px"><h1 class="text-center text-danger">45</h1></div>
+                                                                </div>
+                                                                <div class="row" style="height: 40px">
+                                                                    <div class="col-12"><h5 class="text-center text-danger">Email Spam</h5></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-6 col-md-12 px-1">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="row align-items-center" style="height: 60px">
+                                                                    <div class="col-12"><h6 class="text-center text-muted">ATP Only</h6></div>
+                                                                </div>
+                                                                <div class="row" style="height: 40px">
+                                                                    <div class="col-12"><h5 class="text-center text-muted">Threat IP Hits</h5></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-lg-6 col-md-12 px-1">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="row align-items-center" style="height: 60px">
+                                                                    <div class="col-12"><h6 class="text-center text-muted">ATP Only</h6></div>
+                                                                </div>
+                                                                <div class="row" style="height: 40px">
+                                                                    <div class="col-12"><h5 class="text-center text-muted">DNS Filter Hits</h5></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-12 px-1">
-                                                <div class="card">
-                                                    <div class="card-header rounded-top">Blocked Application & Website Hits</div>
-                                                    <div class="card-body">Chart<br /><br /><br /></div>
+
+                                        <!-- Right modal content -->
+                                        <div id="security-indicator-right-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg modal-right">
+                                                <div class="modal-content">
+                                                    <div class="modal-header border-0">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h4 class="mt-3 mb-2">Security Indicator Detail</h4>
+                                                        <div class="container-fluid">
+                                                            <div class="row my-2">
+                                                                <select class="text-truncate">
+                                                                    <option>Taipei</option>
+                                                                    <option>Hsinchu</option>
+                                                                </select>   
+                                                            </div>
+                        
+                                                            <div class="row my-2">
+                                                                <div class="col">
+                                                                    <div id="grid"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div><!-- /.modal -->
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-header">Security Indicator
+                                                <div class="card-widgets">
+                                                    <div class="d-flex">
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary d-xl-none" id="date-range-picker-icon">
+                                                            <i class="mdi mdi-calendar"></i>
+                                                        </button>
+                                                        <div class="d-none d-xl-block" style="width:150px">
+                                                            <button type="button" class="btn btn-block btn-sm btn-outline-secondary d-flex justify-content-between" id="date-range-picker">
+                                                                <span>Last 24 Hours</span><i class="mdi mdi-chevron-down"></i>
+                                                            </button>
+                                                        </div>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary ml-1">
+                                                            <i class="mdi mdi-chevron-double-right"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-body">
+        
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-xl-6 px-1">
+                                                        <div class="card">
+                                                            <div class="card-header text-center bg-transparent h5 p-0">Top 3 Bandwidth IP</div>
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">192.167.1.150</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 14.25 GB</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">192.167.1.151</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 10.8 GB</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">192.167.1.153</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 7.5 GB</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-xl-6 px-1">
+                                                        <div class="card">
+                                                            <div class="card-header text-center bg-transparent h5 p-0">Top 3 Application</div>
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">Google Chrome</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 3 GB</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">Facebook</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 1.5 GB</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">icmp</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 656 MB</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+            
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-xl-6 px-1">
+                                                        <div class="card">
+                                                            <div class="card-header text-center bg-transparent h5 p-0">Top 3 Destination Country</div>
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">United States</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 10 GB</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">Taiwan</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 6.5 GB</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">Japan</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 5.25 GB</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-xl-6 px-1">
+                                                        <div class="card">
+                                                            <div class="card-header text-center bg-transparent h5 p-0">Top 3 Destination Port</div>
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">80</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 6 GB</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">110</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 3 GB</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-8">
+                                                                        <div class="row">
+                                                                            <div class="col-12">25</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="progress mb-2">
+                                                                                    <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-4 px-0 text-right align-self-center"> 2.5 GB</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+            
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">Threat History in 7 Days on Map</div>
+                                    <div class="card-body">
                                         <div class="row">
-                                            <div class="col-xl-3 col-lg-6 col-md-12 px-1">
-                                                <div class="card" data-toggle="modal" data-target="#security-indicator-right-modal" data-indicator="ADP">
+                                            <div class="col-xl-10 offset-xl-1 col-lg-12">
+                                                <div id="world-map-markers" style="height: 220px"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-12 col-xl-6 d-flex">
+                                                <div class="card flex-fill">
+                                                    <div class="card-header text-center bg-transparent h5 p-0">Top Attack Origins</div>
                                                     <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-12 align-self-center" style="height: 60px"><h1 class="text-center text-danger"><span>1065</span></h1></div>
+
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="flag-icon flag-icon-us"></i>
+                                                                    <span class="d-none d-sm-inline-block">United States</span> 
+                                                                </span>
+                                                                <span>
+                                                                    2128 Hits (55%)
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                        <div class="row" style="height: 40px">
-                                                            <div class="col-12"><h5 class="text-center text-danger">ADP Hits</h5></div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="flag-icon flag-icon-de"></i>
+                                                                    <span class="d-none d-sm-inline-block">Germany</span> 
+                                                                </span>
+                                                                <span>
+                                                                    956 Hits (22%)
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="flag-icon flag-icon-it"></i>
+                                                                    <span class="d-none d-sm-inline-block">Italy</span> 
+                                                                </span>
+                                                                <span>
+                                                                    741 Hits (16%)
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="flag-icon flag-icon-gb"></i>
+                                                                    <span class="d-none d-sm-inline-block">United Kingdom</span> 
+                                                                </span>
+                                                                <span>
+                                                                    603 Hits (5%)
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="flag-icon bg-secondary d-none d-sm-inline-block"></i>
+                                                                    <span>Others</span> 
+                                                                </span>
+                                                                <span>
+                                                                    522 Hits (2%)
+                                                                </span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-3 col-lg-6 col-md-12 px-1">
-                                                <div class="card" data-toggle="modal" data-target="#security-indicator-right-modal" data-indicator="IDP">
+
+                                            <div class="col-lg-12 col-xl-6 d-flex">
+                                                <div class="card flex-fill">
+                                                    <div class="card-header text-center bg-transparent h5 p-0">Top Attack Targets</div>
                                                     <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-12 align-self-center" style="height: 60px"><h1 class="text-center text-danger">2</h1></div>
+
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="flag-icon flag-icon-fr mr-1"></i>France
+                                                                </span>
+                                                                <span>
+                                                                    2128 Hits (55%)
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                        <div class="row" style="height: 40px">
-                                                            <div class="col-12"><h5 class="text-center text-danger">IDP Hits</h5></div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="flag-icon flag-icon-cn mr-1"></i>China
+                                                                </span>
+                                                                <span>
+                                                                    956 Hits (22%)
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-6 col-md-12 px-1">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <div class="row align-items-center" style="height: 60px">
-                                                            <div class="col-12"><h6 class="text-center text-muted">ATP & USG Flex Only</h6></div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="flag-icon flag-icon-jp mr-1"></i>Japan
+                                                                </span>
+                                                                <span>
+                                                                    741 Hits (16%)
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                        <div class="row" style="height: 40px">
-                                                            <div class="col-12"><h5 class="text-center text-muted">URL Threat Hits</h5></div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="flag-icon flag-icon-ch mr-1"></i>Switzerland
+                                                                </span>
+                                                                <span>
+                                                                    603 Hits (5%)
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-6 col-md-12 px-1">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <div class="row align-items-center" style="height: 60px">
-                                                            <div class="col-12"><h6 class="text-center text-muted">ATP Only</h6></div>
-                                                        </div>
-                                                        <div class="row" style="height: 40px">
-                                                            <div class="col-12"><h5 class="text-center text-muted">Sandboxing Alerts</h5></div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="flag-icon bg-secondary mr-1"></i>Others
+                                                                </span>
+                                                                <span>
+                                                                    522 Hits (2%)
+                                                                </span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="row">
-                                            <div class="col-xl-3 col-lg-6 col-md-12 px-1">
-                                                <div class="card" data-toggle="modal" data-target="#security-indicator-right-modal" data-indicator="AV">
+                                            <div class="col-lg-12 col-xl-6 d-flex">
+                                                <div class="card flex-fill">
+                                                    <div class="card-header text-center bg-transparent h5 p-0">Top Attack Types</div>
                                                     <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-12 align-self-center" style="height: 60px"><h1 class="text-center text-danger"><span>569</span></h1></div>
+
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="mdi mdi-checkbox-blank text-secondary mr-1"></i>Intrusion
+                                                                </span>
+                                                                <span>
+                                                                    2128 Hits (55%)
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                        <div class="row" style="height: 40px">
-                                                            <div class="col-12"><h5 class="text-center text-danger">Virus / Malware Hits</h5></div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="mdi mdi-checkbox-blank text-secondary mr-1"></i>Malware
+                                                                </span>
+                                                                <span>
+                                                                    956 Hits (22%)
+                                                                </span>
+                                                            </div>
                                                         </div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="mdi mdi-checkbox-blank text-secondary mr-1"></i>Email Spam
+                                                                </span>
+                                                                <span>
+                                                                    741 Hits (16%)
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="mdi mdi-checkbox-blank text-secondary mr-1"></i>URL Threat
+                                                                </span>
+                                                                <span>
+                                                                    603 Hits (5%)
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="mdi mdi-checkbox-blank text-secondary mr-1"></i>Others
+                                                                </span>
+                                                                <span>
+                                                                    522 Hits (2%)
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-3 col-lg-6 col-md-12 px-1">
-                                                <div class="card" data-toggle="modal" data-target="#security-indicator-right-modal" data-indicator="AS">
+
+
+                                            <div class="col-lg-12 col-xl-6 d-flex">
+                                                <div class="card flex-fill">
+                                                    <div class="card-header text-center bg-transparent h5 p-0">Top Attack Time Period</div>
                                                     <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-12 align-self-center" style="height: 60px"><h1 class="text-center text-danger">45</h1></div>
+
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="mdi mdi-checkbox-blank text-secondary mr-1"></i>1:00 - 4:00
+                                                                </span>
+                                                                <span>
+                                                                    2128 Hits (55%)
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                        <div class="row" style="height: 40px">
-                                                            <div class="col-12"><h5 class="text-center text-danger">Email Spam</h5></div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="mdi mdi-checkbox-blank text-secondary mr-1"></i>21:00 - 24:00
+                                                                </span>
+                                                                <span>
+                                                                    956 Hits (22%)
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-6 col-md-12 px-1">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <div class="row align-items-center" style="height: 60px">
-                                                            <div class="col-12"><h6 class="text-center text-muted">ATP Only</h6></div>
+                                                        <div class="row mb-1">
+                                                            <div class="col d-flex justify-content-between">
+                                                                <span>
+                                                                    <i class="mdi mdi-checkbox-blank text-secondary mr-1"></i>15:00 - 18:00
+                                                                </span>
+                                                                <span>
+                                                                    741 Hits (16%)
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                        <div class="row" style="height: 40px">
-                                                            <div class="col-12"><h5 class="text-center text-muted">Threat IP Hits</h5></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-6 col-md-12 px-1">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <div class="row align-items-center" style="height: 60px">
-                                                            <div class="col-12"><h6 class="text-center text-muted">ATP Only</h6></div>
-                                                        </div>
-                                                        <div class="row" style="height: 40px">
-                                                            <div class="col-12"><h5 class="text-center text-muted">DNS Filter Hits</h5></div>
-                                                        </div>
+                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -557,335 +1119,40 @@
                                 </div>
 
                                 <!-- Right modal content -->
-                                <div id="security-indicator-right-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div id="threat-history-right-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-lg modal-right">
                                         <div class="modal-content">
                                             <div class="modal-header border-0">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                             </div>
                                             <div class="modal-body">
-                                                <h4 class="mt-3 mb-2">Security Indicator Detail</h4>
+                                                <h5 class="mt-3 mb-2">Security Indicator Detail</h5>
                                                 <div class="container-fluid">
                                                     <div class="row my-2">
                                                         <select class="text-truncate">
                                                             <option>Taipei</option>
                                                             <option>Hsinchu</option>
-                                                        </select>   
+                                                        </select>
                                                     </div>
-                        
+
                                                     <div class="row my-2">
                                                         <div class="col">
                                                             <div id="grid"></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                
-                                            </div>
-                                        </div><!-- /.modal-content -->
-                                    </div><!-- /.modal-dialog -->
-                                </div><!-- /.modal -->
 
-                            </div>
-                            <div class="col-lg-5 col-md-12 d-flex p-0">
-                                <div class="card flex-fill mb-0">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-6 px-1">
-                                                <h4 class="header-title mb-3">Traffic</h4>
-                                            </div>
-                                            <div class="col-6 px-1">
-                                                <div class="d-flex float-right">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary d-xl-none" id="date-range-picker-icon">
-                                                        <i class="mdi mdi-calendar"></i>
-                                                    </button>
-                                                    <div class="d-none d-xl-block" style="width:150px">
-                                                        <button type="button" class="btn btn-block btn-sm btn-outline-secondary d-flex justify-content-between" id="date-range-picker">
-                                                            <span>Last 24 Hours</span><i class="mdi mdi-chevron-down"></i>
-                                                        </button>
-                                                    </div>
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary ml-1">
-                                                        <i class="mdi mdi-chevron-double-right"></i>
-                                                    </button>
-                                                </div>
                                             </div>
                                         </div>
-        
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-6 px-1">
-                                                <div class="card">
-                                                    <div class="card-header rounded-top">Top 3 Bandwidth IP</div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">192.167.1.150</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 14.25 GB</div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">192.167.1.151</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 10.8 GB</div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">192.167.1.153</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 7.5 GB</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-lg-6 px-1">
-                                                <div class="card">
-                                                    <div class="card-header rounded-top">Top 3 Application</div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">Google Chrome</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 3 GB</div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">Facebook</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 1.5 GB</div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">icmp</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 656 MB</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-6 px-1">
-                                                <div class="card">
-                                                    <div class="card-header rounded-top">Top 3 Destination Country</div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">United States</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 10 GB</div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">Taiwan</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 6.5 GB</div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">Japan</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 5.25 GB</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-lg-6 px-1">
-                                                <div class="card">
-                                                    <div class="card-header rounded-top">Top 3 Destination Port</div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">80</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 6 GB</div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">110</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 3 GB</div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-8">
-                                                                <div class="row">
-                                                                    <div class="col-12">25</div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="progress mb-2">
-                                                                            <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 px-0 text-right align-self-center"> 2.5 GB</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                        </div>
+                                        <!-- /.modal-content -->
                                     </div>
+                                    <!-- /.modal-dialog -->
                                 </div>
+                                <!-- /.modal -->
                             </div>
+
                         </div>
-                        <div class="row">
-                            <div class="col-lg-8 col-md-12 d-flex p-0">
-                                <div class="card flex-fill">
-                                    <div class="card-body">
-                                        <h4 class="header-title mb-3">Threat Map</h4>
-                                        <div id="world-map-markers" style="height: 300px"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-12 d-flex p-0">
-                                <div class="card flex-fill">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-6 px-1">
-                                                <h4 class="header-title mb-3">Hsinchu Office</h4>
-                                            </div>
-                                            <div class="col-6 px-1">
-                                                <div class="d-flex float-right">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary ml-1">
-                                                        <i class="mdi mdi-chevron-double-right"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row my-3 border-bottom border-light">
-                                            <div class="col-4 text-truncate px-1">Model</div>
-                                            <div class="col-8 text-right text-truncate px-1">USG60</div>
-                                        </div>
-                                        <div class="row my-3 border-bottom border-light">
-                                            <div class="col-4 text-truncate px-1">MAC Address</div>
-                                            <div class="col-8 text-right text-truncate px-1">B8:EC:A3:B8:B5:CC</div>
-                                        </div>
-                                        <div class="row my-3 border-bottom border-light">
-                                            <div class="col-4 text-truncate px-1">Serial Number</div>
-                                            <div class="col-8 text-right text-truncate px-1">S172L27290001</div>
-                                        </div>
-                                        <div class="row my-3 border-bottom border-light">
-                                            <div class="col-4 text-truncate px-1">Firmware Version</div>
-                                            <div class="col-8 text-right text-truncate px-1">4.60 (ABFU.0)b4</div>
-                                        </div>
-                                        <div class="row my-3 border-bottom border-light">
-                                            <div class="col-4 text-truncate px-1">WAM IP Address</div>
-                                            <div class="col-8 text-right text-truncate px-1">61.216.142.38</div>
-                                        </div>
-                                        <div class="row my-3 border-bottom border-light">
-                                            <div class="col-4 text-truncate px-1">License</div>
-                                            <div class="col-8 text-right text-truncate px-1">SecuReporter Premium</div>
-                                        </div>
-                                        <div class="row my-3 border-bottom border-light">
-                                            <div class="col-4 text-truncate px-1">Status</div>
-                                            <div class="col-8 text-right text-truncate px-1">Active (150 Days Remaining)</div>
-                                        </div>
-        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
+
                     </div> <!-- container -->
 
                 </div> <!-- content -->
@@ -984,7 +1251,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -999,7 +1266,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1014,7 +1281,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1033,7 +1300,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1048,7 +1315,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1063,7 +1330,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1078,7 +1345,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1093,7 +1360,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1108,7 +1375,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1320,19 +1587,19 @@
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor js -->
-        <script src="../assets/js/vendor.min.js"></script>
+        <script src="assets/js/vendor.min.js"></script>
 
         <!-- Plugins js-->
-        <script src="../assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="../assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
-        <script src="../assets/libs/daterangepicker/moment.min.js"></script>
-        <script src="../assets/libs/daterangepicker/daterangepicker.js"></script>
+        <script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="assets/libs/daterangepicker/moment.min.js"></script>
+        <script src="assets/libs/daterangepicker/daterangepicker.js"></script>
         
         <!-- Init js-->
-        <script src="../assets/js/pages/dashboard.init.js"></script>
-        <script src="../assets/js/pages/vector-maps.init.js"></script>
+        <script src="assets/js/pages/dashboard.init.js"></script>
+        <script src="assets/js/pages/vector-maps.init.js"></script>
 
         <!-- App js -->
-        <script src="../assets/js/app.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
     </body>
 </html>

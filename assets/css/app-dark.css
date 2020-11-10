@@ -37,6 +37,24 @@ File: Main Css File
   src: local("Cerebri-sans Bold"), url("../fonts/cerebrisans-bold.woff") format("woff");
   font-weight: 700; }
 
+@font-face {
+  font-family: "Galano Grotesque";
+  src: url("../fonts/GalanoGrotesque-Light.eot");
+  src: url("../fonts/GalanoGrotesque-Light.woff") format("woff");
+  font-weight: 300; }
+
+@font-face {
+  font-family: "Galano Grotesque";
+  src: url("../fonts/GalanoGrotesque-Regular.eot");
+  src: url("../fonts/GalanoGrotesque-Regular.woff") format("woff");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Galano Grotesque";
+  src: url("../fonts/GalanoGrotesque-Medium.eot");
+  src: url("../fonts/GalanoGrotesque-Medium.woff") format("woff");
+  font-weight: 500; }
+
 html {
   position: relative;
   min-height: 100%; }
@@ -75,7 +93,7 @@ body {
     padding: 12px 20px;
     position: relative;
     transition: all 0.4s;
-    font-family: "Cerebri Sans,sans-serif";
+    font-family: "Galano Grotesque";
     font-size: 0.95rem; }
     #sidebar-menu > ul > li > a:hover, #sidebar-menu > ul > li > a:focus, #sidebar-menu > ul > li > a:active {
       color: #00acc1;
@@ -577,9 +595,6 @@ body[data-sidebar-icon="twotones"] #sidebar-menu > ul > li > a svg {
       .navbar-custom .app-search .app-search-box input:-ms-input-placeholder {
         font-size: 0.8125rem;
         color: rgba(255, 255, 255, 0.3); }
-      .navbar-custom .app-search .app-search-box input::-ms-input-placeholder {
-        font-size: 0.8125rem;
-        color: rgba(255, 255, 255, 0.3); }
       .navbar-custom .app-search .app-search-box input::placeholder {
         font-size: 0.8125rem;
         color: rgba(255, 255, 255, 0.3); }
@@ -724,8 +739,6 @@ body[data-topbar-color="light"] .navbar-custom {
   body[data-topbar-color="light"] .navbar-custom .button-menu-mobile {
     color: #f3f7f9; }
   body[data-topbar-color="light"] .navbar-custom .app-search input:-ms-input-placeholder {
-    color: #8c98a5 !important; }
-  body[data-topbar-color="light"] .navbar-custom .app-search input::-ms-input-placeholder {
     color: #8c98a5 !important; }
   body[data-topbar-color="light"] .navbar-custom .app-search input::placeholder {
     color: #8c98a5 !important; }
@@ -1019,7 +1032,7 @@ body[data-layout-mode="horizontal"] .content-page {
     line-height: 22px;
     padding: calc(33px / 2) 1.1rem;
     color: #919eab;
-    font-family: "Cerebri Sans,sans-serif"; }
+    font-family: "Galano Grotesque"; }
     .topnav .navbar-nav .nav-link i {
       font-size: 15px;
       display: inline-block; }
@@ -1194,7 +1207,7 @@ body[data-layout-mode="two-column"] .sidebar-main-menu {
   body[data-layout-mode="two-column"] .sidebar-main-menu .nav > .nav-item > .nav-link {
     color: #6e768e;
     font-size: 0.95rem;
-    font-family: "Cerebri Sans,sans-serif"; }
+    font-family: "Galano Grotesque"; }
   body[data-layout-mode="two-column"] .sidebar-main-menu .nav > .nav-item .menu-arrow {
     right: 10px; }
   body[data-layout-mode="two-column"] .sidebar-main-menu .nav .nav-link {
@@ -1332,10 +1345,10 @@ body[data-layout-mode="two-column"][data-layout-width="boxed"]:not([data-sidebar
   min-width: 160px; }
 
 .font-family-primary {
-  font-family: "Nunito", sans-serif; }
+  font-family: "Galano Grotesque"; }
 
 .font-family-secondary {
-  font-family: "Cerebri Sans,sans-serif"; }
+  font-family: "Galano Grotesque"; }
 
 .sp-line-1,
 .sp-line-2,
@@ -2238,11 +2251,11 @@ body.authentication-bg-pattern {
   text-shadow: rgba(102, 88, 221, 0.3) 5px 1px, rgba(102, 88, 221, 0.2) 10px 3px;
   font-size: 84px;
   line-height: 90px;
-  font-family: "Cerebri Sans,sans-serif"; }
+  font-family: "Galano Grotesque"; }
 
 .error-text-box {
   font-size: 10rem;
-  font-family: "Cerebri Sans,sans-serif";
+  font-family: "Galano Grotesque";
   min-height: 200px; }
   .error-text-box .text {
     fill: none;
@@ -2759,7 +2772,7 @@ body.authentication-bg-pattern {
     display: inline-block;
     margin-bottom: 5px;
     font-weight: 500;
-    font-family: "Cerebri Sans,sans-serif"; }
+    font-family: "Galano Grotesque"; }
     .filter-menu a:hover {
       background-color: rgba(102, 88, 221, 0.15);
       color: #6658dd; }
@@ -3057,7 +3070,7 @@ body.authentication-bg-pattern {
 .apex-charts {
   min-height: 10px !important; }
   .apex-charts text {
-    font-family: "Nunito", sans-serif !important;
+    font-family: "Galano Grotesque" !important;
     fill: #8c98a5;
     font-weight: 600; }
   .apex-charts .apexcharts-canvas {
@@ -3066,7 +3079,7 @@ body.authentication-bg-pattern {
 .apexcharts-tooltip-title,
 .apexcharts-tooltip-text,
 .apexcharts-legend-text {
-  font-family: "Nunito", sans-serif !important; }
+  font-family: "Galano Grotesque" !important; }
 
 .apexcharts-legend-series {
   font-weight: 600; }
@@ -3080,7 +3093,7 @@ body.authentication-bg-pattern {
 
 .apexcharts-yaxis text,
 .apexcharts-xaxis text {
-  font-family: "Nunito", sans-serif !important;
+  font-family: "Galano Grotesque" !important;
   fill: #8c98a5;
   font-weight: 600; }
 
@@ -3107,7 +3120,7 @@ body.authentication-bg-pattern {
 
 .apexcharts-datalabels-group text {
   fill: #8c98a5 !important;
-  font-family: "Nunito", sans-serif !important; }
+  font-family: "Galano Grotesque" !important; }
 
 .scatter-images-chart .apexcharts-legend {
   overflow: hidden !important;
@@ -3588,7 +3601,7 @@ th.fc-day-header {
   color: #000 !important;
   font-size: 12px !important;
   line-height: 18px !important;
-  font-family: "Nunito", sans-serif !important;
+  font-family: "Galano Grotesque" !important;
   font-weight: 600 !important; }
 
 .dataTables_wrapper.container-fluid {
@@ -3654,7 +3667,7 @@ div.dt-button-info {
   background-color: #424e5a; }
 
 .daterangepicker {
-  font-family: "Nunito", sans-serif; }
+  font-family: "Galano Grotesque"; }
   .daterangepicker td.active,
   .daterangepicker td.active:hover,
   .daterangepicker .ranges li.active {
@@ -3684,8 +3697,6 @@ div.dt-button-info {
         border-color: #8c98a5 transparent transparent transparent;
         border-width: 6px 6px 0 6px; }
   .select2-container input:-ms-input-placeholder {
-    color: #586877; }
-  .select2-container input::-ms-input-placeholder {
     color: #586877; }
   .select2-container input::placeholder {
     color: #586877; }
@@ -3944,12 +3955,12 @@ div.dt-button-info {
 
 .jq-toast-single {
   padding: 15px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   background-color: #6658dd;
   font-size: 13px;
   line-height: 22px; }
   .jq-toast-single h2 {
-    font-family: "Nunito", sans-serif; }
+    font-family: "Galano Grotesque"; }
   .jq-toast-single a {
     font-size: 0.875rem; }
     .jq-toast-single a:hover {
@@ -4033,7 +4044,7 @@ div.dt-button-info {
   border-color: #f1556c; }
 
 .swal2-modal {
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1); }
   .swal2-modal .swal2-title {
     font-size: 24px; }
@@ -4104,8 +4115,6 @@ div.dt-button-info {
   .selectize-input > input {
     color: #94a0ad; }
     .selectize-input > input:-ms-input-placeholder {
-      color: #586877; }
-    .selectize-input > input::-ms-input-placeholder {
       color: #586877; }
     .selectize-input > input::placeholder {
       color: #586877; }
@@ -4300,7 +4309,7 @@ div.hopscotch-bubble {
     border-color: #6658dd !important;
     text-shadow: none !important;
     margin: 0 0 0 5px !important;
-    font-family: "Nunito", sans-serif;
+    font-family: "Galano Grotesque";
     color: #fff !important; }
   div.hopscotch-bubble .hopscotch-bubble-number {
     background: #f1556c;
@@ -4326,10 +4335,10 @@ div.hopscotch-bubble {
   div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-arrow-border {
     border-top: 0 solid rgba(0, 0, 0, 0.5); }
   div.hopscotch-bubble h3 {
-    font-family: "Cerebri Sans,sans-serif";
+    font-family: "Galano Grotesque";
     margin-bottom: 10px; }
   div.hopscotch-bubble .hopscotch-content {
-    font-family: "Nunito", sans-serif; }
+    font-family: "Galano Grotesque"; }
 
 .flotTip {
   padding: 8px 12px;
@@ -4343,7 +4352,7 @@ div.hopscotch-bubble {
   font-size: 14px; }
   .legend tr {
     height: 30px;
-    font-family: "Cerebri Sans,sans-serif"; }
+    font-family: "Galano Grotesque"; }
   .legend > div {
     background-color: transparent !important; }
 
@@ -4374,7 +4383,7 @@ div.hopscotch-bubble {
   height: 1.5em; }
 
 .morris-chart text {
-  font-family: "Cerebri Sans,sans-serif" !important;
+  font-family: "Galano Grotesque" !important;
   fill: #94a0ad; }
 
 .morris-hover {
@@ -4387,11 +4396,11 @@ div.hopscotch-bubble {
     padding: 10px 12px;
     background: #f3f7f9;
     color: #36404a;
-    font-family: "Nunito", sans-serif; }
+    font-family: "Galano Grotesque"; }
     .morris-hover.morris-default-style .morris-hover-row-label {
       font-weight: bold;
       margin: 0.25em 0;
-      font-family: "Cerebri Sans,sans-serif"; }
+      font-family: "Galano Grotesque"; }
     .morris-hover.morris-default-style .morris-hover-point {
       white-space: nowrap;
       margin: 0.1em 0;
@@ -4503,7 +4512,7 @@ div.hopscotch-bubble {
   opacity: 1; }
   .c3-tooltip td {
     border-left: none;
-    font-family: "Cerebri Sans,sans-serif"; }
+    font-family: "Galano Grotesque"; }
     .c3-tooltip td > span {
       background: #f3f7f9; }
   .c3-tooltip tr {
@@ -4517,11 +4526,11 @@ div.hopscotch-bubble {
   font-weight: 600; }
 
 .c3 text {
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   fill: #94a0ad; }
 
 .c3-legend-item {
-  font-family: "Cerebri Sans,sans-serif";
+  font-family: "Galano Grotesque";
   font-size: 14px; }
 
 .c3 line,
@@ -4550,10 +4559,10 @@ div.hopscotch-bubble {
 .rickshaw_graph .detail .item,
 .rickshaw_graph .detail .x_label,
 .rickshaw_graph .x_tick .title {
-  font-family: "Nunito", sans-serif; }
+  font-family: "Galano Grotesque"; }
 
 .gauge-chart text {
-  font-family: "Nunito", sans-serif !important; }
+  font-family: "Galano Grotesque" !important; }
 
 .responsive-table-plugin .dropdown-menu li.checkbox-row {
   padding: 7px 15px;
@@ -4909,7 +4918,7 @@ table[data-toggle="table"] {
   .tablesaw thead tr:first-child th {
     border: none;
     font-weight: 500;
-    font-family: "Cerebri Sans,sans-serif"; }
+    font-family: "Galano Grotesque"; }
 
 .tablesaw td {
   border-top: 1px solid #3e4954 !important; }
@@ -5092,7 +5101,7 @@ table[data-toggle="table"] {
 
 .ms-optgroup-label {
   font-weight: 500;
-  font-family: "Cerebri Sans,sans-serif";
+  font-family: "Galano Grotesque";
   color: #f3f7f9 !important;
   font-size: 13px; }
 
@@ -5126,7 +5135,7 @@ table[data-toggle="table"] {
 .autocomplete-group {
   padding: 5px;
   font-weight: 500;
-  font-family: "Cerebri Sans,sans-serif"; }
+  font-family: "Galano Grotesque"; }
 
 .autocomplete-group strong {
   font-weight: bold;
@@ -5360,7 +5369,7 @@ span.flatpickr-weekday,
   padding-left: 0.9rem; }
 
 .ql-container {
-  font-family: "Nunito", sans-serif; }
+  font-family: "Galano Grotesque"; }
   .ql-container.ql-snow {
     border-color: #424e5a; }
 
@@ -5369,7 +5378,7 @@ span.flatpickr-weekday,
   border-radius: 0.2rem; }
 
 .ql-toolbar {
-  font-family: "Nunito", sans-serif !important; }
+  font-family: "Galano Grotesque" !important; }
   .ql-toolbar span {
     outline: none !important;
     color: #94a0ad; }
@@ -5510,7 +5519,7 @@ span.flatpickr-weekday,
   border: none;
   background: #f3f7f9;
   color: #36404a;
-  font-family: "Cerebri Sans,sans-serif";
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   padding: 5px 8px; }
 
@@ -5531,7 +5540,7 @@ span.flatpickr-weekday,
   max-width: 200px;
   display: none;
   color: #fff;
-  font-family: "Cerebri Sans,sans-serif"; }
+  font-family: "Galano Grotesque"; }
 
 .mapael .zoomIn,
 .mapael .zoomOut,
@@ -5554,7 +5563,7 @@ span.flatpickr-weekday,
   line-height: 24px; }
 
 .mapael .plotLegend text {
-  font-family: "Nunito", sans-serif !important;
+  font-family: "Galano Grotesque" !important;
   fill: #8c98a5; }
 
 .datepicker {
@@ -5660,3 +5669,25 @@ span.flatpickr-weekday,
     content: "\F01DB";
     font-family: "Material Design Icons";
     position: absolute; }
+
+.daterangepicker {
+  background-color: #424e5a; }
+  .daterangepicker td.in-range {
+    background-color: #424e5a;
+    color: #8c98a5; }
+  .daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+    background-color: #36404a; }
+  .daterangepicker td.available:hover, .daterangepicker th.available:hover {
+    background-color: #424e5a; }
+  .daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #4a81d4;
+    color: #fff; }
+  .daterangepicker .calendar-table {
+    background-color: #36404a;
+    border-color: #36404a; }
+  .daterangepicker .ranges li:hover {
+    background-color: #36404a; }
+  .daterangepicker .ranges li.active {
+    background-color: #4a81d4; }
+  .daterangepicker .drp-buttons .btn.btn-primary {
+    background-color: #4a81d4; }

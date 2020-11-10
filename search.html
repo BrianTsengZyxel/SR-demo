@@ -8,24 +8,24 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- plugin css -->
+        <link href="assets/libs/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
-        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
-        <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
-        <link href="../assets/css/kendo-ui.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
+        <link href="assets/css/kendo-ui.min.css" rel="stylesheet" type="text/css" class="default-stylesheet"/>
 
-        <link href="../assets/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
-        <link href="../assets/css/app-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
-        <link href="../assets/css/kendo-ui-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+        <link href="assets/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+        <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
+        <link href="assets/css/kendo-ui-dark.min.css" rel="stylesheet" type="text/css" class="dark-stylesheet"/>
 
         <!-- icons -->
-        <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        
-        <!-- plugin css -->
-        <link href="../assets/libs/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     </head>
-    <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "condensed", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+    <body class="loading">
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -44,7 +44,7 @@
                             <div class="dropdown-menu dropdown-lg dropdown-menu-right p-2">
                                 <form>
                                     <div class="form-group">
-                                        <label for="organization-select">Organization</label>
+                                        <label for="organization-select" class="font-weight-normal">Organization</label>
                                         <select class="custom-select text-truncate" id="organization-select">
                                             <option>Taipei</option>
                                             <option>Hsinchu</option>
@@ -54,7 +54,7 @@
 
                                 <form>
                                     <div class="form-group">
-                                        <label for="site-select">Site</label>
+                                        <label for="site-select font-weight-normal" class="font-weight-normal">Site</label>
                                         <select class="custom-select text-truncate" id="site-select">
                                             <option>Zyxel</option>
                                             <option>Long Long Long Long Long Site Name</option>
@@ -88,7 +88,7 @@
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item active">
                                         <div class="notify-icon">
-                                            <img src="../assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <img src="assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                         <p class="notify-details">Cristina Pride</p>
                                         <p class="text-muted mb-0 user-msg">
                                             <small>Hi, How are you? What about our next meeting</small>
@@ -108,7 +108,7 @@
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                                         <div class="notify-icon">
-                                            <img src="../assets/images/users/user-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <img src="assets/images/users/user-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                         <p class="notify-details">Karen Robinson</p>
                                         <p class="text-muted mb-0 user-msg">
                                             <small>Wow ! this admin looks good and awesome design</small>
@@ -155,46 +155,24 @@
     
                             </div>
                         </li>
-    
+
                         <li class="dropdown notification-list topbar-dropdown">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <i class="fe-user noti-icon"></i>
-                                <span class="d-none d-xl-inline-block ml-1">
-                                    Geneva <i class="mdi mdi-chevron-down"></i> 
-                                </span>
+                                <i class="fe-settings noti-icon"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                                 <!-- item-->
                                 <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                                    <h5 class="text-overflow m-0">Preference</h5>
                                 </div>
-    
+
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-user"></i>
-                                    <span>My Account</span>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" name="color-scheme-mode" id="dark-mode-check">
+                                        <label class="custom-control-label font-weight-normal" for="dark-mode-check"><i class="fe-moon"></i>Dark Mode</label>
+                                    </div>
                                 </a>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-settings"></i>
-                                    <span>Settings</span>
-                                </a>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-lock"></i>
-                                    <span>Lock Screen</span>
-                                </a>
-    
-                                <div class="dropdown-divider"></div>
-    
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-log-out"></i>
-                                    <span>Logout</span>
-                                </a>
-    
                             </div>
                         </li>
 
@@ -205,7 +183,7 @@
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                                 <!-- item-->
                                 <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Help</h6>
+                                    <h5 class="text-overflow m-0">Help</h5>
                                 </div>
     
                                 <!-- item-->
@@ -220,11 +198,45 @@
     
                             </div>
                         </li>
-    
-                        <li class="dropdown d-none d-lg-inline-block topbar-dropdown">
-                            <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
-                                <i class="fe-settings noti-icon"></i>
+
+                        <li class="dropdown notification-list topbar-dropdown">
+                            <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">            
+                                <span class="bg-soft-secondary text-secondary rounded-circle p-1 user-select-none">MD</span>
                             </a>
+
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                                </div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-user"></i>
+                                    <span>My Account</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-settings"></i>
+                                    <span>Settings</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-lock"></i>
+                                    <span>Lock Screen</span>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-log-out"></i>
+                                    <span>Logout</span>
+                                </a>
+
+                            </div>
                         </li>
 
                         <li class="dropdown notification-list topbar-dropdown">
@@ -237,19 +249,19 @@
                                     <div class="row no-gutters">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/slack.png" alt="slack">
+                                                <img src="assets/images/brands/slack.png" alt="slack">
                                                 <span>Slack</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/github.png" alt="Github">
+                                                <img src="assets/images/brands/github.png" alt="Github">
                                                 <span>GitHub</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/dribbble.png" alt="dribbble">
+                                                <img src="assets/images/brands/dribbble.png" alt="dribbble">
                                                 <span>Dribbble</span>
                                             </a>
                                         </div>
@@ -258,19 +270,19 @@
                                     <div class="row no-gutters">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/bitbucket.png" alt="bitbucket">
+                                                <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
                                                 <span>Bitbucket</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/dropbox.png" alt="dropbox">
+                                                <img src="assets/images/brands/dropbox.png" alt="dropbox">
                                                 <span>Dropbox</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="../assets/images/brands/g-suite.png" alt="G Suite">
+                                                <img src="assets/images/brands/g-suite.png" alt="G Suite">
                                                 <span>G Suite</span>
                                             </a>
                                         </div>
@@ -287,21 +299,21 @@
                     <div class="logo-box">
                         <a href="index.html" class="logo logo-dark text-center">
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.svg" alt="" height="36">
+                                <img src="assets/images/logo-sm.svg" alt="" height="36">
                                 <!-- <span class="logo-lg-text-light">UBold</span> -->
                             </span>
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-dark.svg" alt="" height="36">
+                                <img src="assets/images/logo-dark.svg" alt="" height="36">
                                 <!-- <span class="logo-lg-text-light">U</span> -->
                             </span>
                         </a>
     
                         <a href="index.html" class="logo logo-light text-center">
                             <span class="logo-sm">
-                                <img src="../assets/images/logo-sm.svg" alt="" height="36">
+                                <img src="assets/images/logo-sm.svg" alt="" height="36">
                             </span>
                             <span class="logo-lg">
-                                <img src="../assets/images/logo-light.svg" alt="" height="36">
+                                <img src="assets/images/logo-light.svg" alt="" height="36">
                             </span>
                         </a>
                     </div>
@@ -325,20 +337,22 @@
                             <!-- End mobile menu toggle-->
                         </li>   
             
-                        <li class="d-none d-md-block nav-link">
+                        <li class="d-none d-md-inline-block nav-link">
                             <form class="form-inline">
-                                <label class="mr-1" for="organization-select" class="formin">Organization</label>
+                                <label for="organization-select" class="mr-1 font-weight-normal">Organization</label>
                                 <select class="custom-select text-truncate org-select" id="organization-select">
                                     <option>Taipei</option>
                                     <option>Hsinchu</option>
                                 </select>
 
-                                <label for="site-select" class="mr-1 ml-2">Site</label>
+                                <label for="site-select" class="mr-1 ml-2 font-weight-normal">Site</label>
                                 <select class="custom-select text-truncate site-select" id="site-select">
                                     <option>Zyxel</option>
                                     <option>Long Long Long Long Long Site Name</option>
                                 </select>
+
                             </form>
+
                         </li>
             
                     </ul>
@@ -357,7 +371,7 @@
 
                         <ul id="side-menu">
                             <li>
-                                <a href="/">
+                                <a href="index.html">
                                     <i data-feather="home"></i>
                                     <span> Home </span>
                                 </a>
@@ -423,27 +437,202 @@
                             <div class="col-auto">
                                 <ul class="nav nav-pills border rounded">
                                     <li class="nav-item">
-                                        <a href="#log" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        <a href="#log" data-toggle="tab" aria-expanded="true" class="nav-link active">
                                             Log
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#user" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                                        <a href="#user" data-toggle="tab" aria-expanded="false" class="nav-link">
                                             User
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="#ip" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                            IP
+                                        </a>
+                                    </li>
                                 </ul>
+                            </div>
+                            <div class="col">
+                                <div class="float-right">
+                                    <button type="button" class="btn btn-block btn-sm btn-outline-secondary">Download History Data</button>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <div class="tab-content py-0">
-                                    <div class="tab-pane" id="log">
+                                    <div class="tab-pane active" id="log">
                                         <div class="row">
                                             <div class="col-12"><h4 class="text-center">Search Log</h4></div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul class="nav nav-tabs nav-bordered">
+                                                    <li class="nav-item">
+                                                        <a href="#security" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                                                            Security
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#traffic" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                            Traffic
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane show active" id="security">
+                                                        <ul class="nav nav-tabs">
+                                                            <li class="nav-item">
+                                                                <a href="#adp" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                                                                    ADP
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#sandboxing" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                                    Sandboxing
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#mail-protection" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                                    Mail Protection
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#idp" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                                    IDP
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#url-threat-filter" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                                    URL Threat Filter
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#ip-reputation" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                                    IP Reputation
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#anti-virus-malware" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                                    Anti Virus / Malware
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#app-patrol" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                                    App Patrol
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#web-security" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                                    Web Security
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="tab-content">
+                                                            <div class="tab-pane show active" id="adp">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="d-flex float-right">
+                                                                            <button type="button" class="btn btn-sm btn-outline-secondary mr-1">
+                                                                                <i class="mdi mdi-filter"></i>
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-sm btn-outline-secondary mr-1">
+                                                                                <i class="mdi mdi-arrow-top-right-thick"></i>
+                                                                            </button>
+                                                                            <div class="d-none d-xl-block" style="width:150px">
+                                                                                <button type="button" class="btn btn-block btn-sm btn-outline-secondary d-flex justify-content-between" id="security-indicator-date-range-picker">
+                                                                                    <span>Last 24 Hours</span><i class="mdi mdi-chevron-down"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mt-2">
+                                                                    <div class="col-12">
+                                                                        <div id="adp-grid"></div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="tab-pane" id="sandboxing">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="d-flex float-right">
+                                                                            <button type="button" class="btn btn-sm btn-outline-secondary mr-1">
+                                                                                <i class="mdi mdi-filter"></i>
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-sm btn-outline-secondary mr-1">
+                                                                                <i class="mdi mdi-arrow-top-right-thick"></i>
+                                                                            </button>
+                                                                            <div class="d-none d-xl-block" style="width:150px">
+                                                                                <button type="button" class="btn btn-block btn-sm btn-outline-secondary d-flex justify-content-between" id="security-indicator-date-range-picker">
+                                                                                    <span>Last 24 Hours</span><i class="mdi mdi-chevron-down"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mt-2">
+                                                                    <div class="col-12">
+                                                                        sandboxing
+                                                                        <div id="sandboxing-grid"></div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="tab-pane" id="mail-protection">
+                                                                mail protection
+                                                            </div>
+                                                            <div class="tab-pane" id="idp">
+                                                                idp
+                                                            </div>
+                                                            <div class="tab-pane" id="url-threat-filter">
+                                                                url threat filter
+                                                            </div>
+                                                            <div class="tab-pane" id="ip-reputation">
+                                                                ip reputation
+                                                            </div>
+                                                            <div class="tab-pane" id="anti-virus-malware">
+                                                                anti virus / malware
+                                                            </div>
+                                                            <div class="tab-pane" id="app-patrol">
+                                                                app patrol
+                                                            </div>
+                                                            <div class="tab-pane" id="web-security">
+                                                                web security
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="traffic">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="d-flex float-right">
+                                                                    <button type="button" class="btn btn-sm btn-outline-secondary mr-1">
+                                                                        <i class="mdi mdi-filter"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-sm btn-outline-secondary mr-1">
+                                                                        <i class="mdi mdi-arrow-top-right-thick"></i>
+                                                                    </button>
+                                                                    <div class="d-none d-xl-block" style="width:150px">
+                                                                        <button type="button" class="btn btn-block btn-sm btn-outline-secondary d-flex justify-content-between" id="security-indicator-date-range-picker">
+                                                                            <span>Last 24 Hours</span><i class="mdi mdi-chevron-down"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <div id="traffic-grid"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="tab-pane active" id="user">
+                                    <div class="tab-pane" id="user">
                                         <div class="row">
                                             <div class="col-12 px-0"><h4 class="text-center">Search User</h4></div>
                                         </div>
@@ -522,7 +711,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="card-body">
-                                                                            
+                                    
                                                                             Chart
                                                                         </div>
                                                                     </div>
@@ -582,7 +771,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                                
+                        
                                                             <div class="row">
                                                                 <div class="col-xl-4 col-lg-6 px-1 d-flex">
                                                                     <div class="card flex-fill">
@@ -903,7 +1092,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -918,7 +1107,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -933,7 +1122,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -952,7 +1141,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -967,7 +1156,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -982,7 +1171,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -997,7 +1186,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1012,7 +1201,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1027,7 +1216,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-2">
-                                        <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                        <img src="assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -1239,18 +1428,16 @@
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor js -->
-        <script src="../assets/js/vendor.min.js"></script>
+        <script src="assets/js/vendor.min.js"></script>
 
         <!-- Plugins js-->
-        <script src="../assets/libs/daterangepicker/moment.min.js"></script>
-        <script src="../assets/libs/daterangepicker/daterangepicker.js"></script>
-        <script>
-            
-        </script>
+        <script src="assets/libs/daterangepicker/moment.min.js"></script>
+        <script src="assets/libs/daterangepicker/daterangepicker.js"></script>
+
         <!-- Init js-->
-        
+        <script src="assets/js/pages/search.init.js"></script>
 
         <!-- App js -->
-        <script src="../assets/js/app.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
     </body>
 </html>

@@ -42,7 +42,7 @@ File: Custom Bootstrap Css File
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1366px;
-  --font-family-sans-serif: "Nunito", sans-serif;
+  --font-family-sans-serif: Galano Grotesque;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -61,7 +61,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -113,7 +113,7 @@ ul ol {
   margin-bottom: 0; }
 
 dt {
-  font-weight: 700; }
+  font-weight: 500; }
 
 dd {
   margin-bottom: .5rem;
@@ -124,7 +124,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: 500; }
 
 small {
   font-size: 80%; }
@@ -437,7 +437,7 @@ kbd {
   kbd kbd {
     padding: 0;
     font-size: 100%;
-    font-weight: 700; }
+    font-weight: 500; }
 
 pre {
   display: block;
@@ -1460,9 +1460,6 @@ pre {
   .form-control:-ms-input-placeholder {
     color: #adb5bd;
     opacity: 1; }
-  .form-control::-ms-input-placeholder {
-    color: #adb5bd;
-    opacity: 1; }
   .form-control::placeholder {
     color: #adb5bd;
     opacity: 1; }
@@ -1475,7 +1472,6 @@ input[type="time"].form-control,
 input[type="datetime-local"].form-control,
 input[type="month"].form-control {
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none; }
 
 select.form-control:focus::-ms-value {
@@ -2860,7 +2856,6 @@ input[type="button"].btn-block {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none; }
   .custom-select:focus {
     border-color: #b1bbc4;
@@ -2957,7 +2952,6 @@ input[type="button"].btn-block {
   padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none; }
   .custom-range:focus {
     outline: none; }
@@ -3002,8 +2996,7 @@ input[type="button"].btn-block {
     border-radius: 1rem;
     -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    -moz-appearance: none;
-         appearance: none; }
+    appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-moz-range-thumb {
         -moz-transition: none;
@@ -3673,7 +3666,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
@@ -3822,7 +3815,7 @@ input[type="button"].btn-block {
   color: inherit; }
 
 .alert-link {
-  font-weight: 700; }
+  font-weight: 500; }
 
 .alert-dismissible {
   padding-right: 3.9rem; }
@@ -4226,7 +4219,7 @@ input[type="button"].btn-block {
 .close {
   float: right;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1;
   color: #000;
   text-shadow: none;
@@ -4439,7 +4432,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4524,7 +4517,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7209,16 +7202,16 @@ button.bg-blue:focus {
   font-weight: 300 !important; }
 
 .font-weight-lighter {
-  font-weight: lighter !important; }
+  font-weight: 300 !important; }
 
 .font-weight-normal {
   font-weight: 400 !important; }
 
 .font-weight-bold {
-  font-weight: 700 !important; }
+  font-weight: 500 !important; }
 
 .font-weight-bolder {
-  font-weight: bolder !important; }
+  font-weight: 500 !important; }
 
 .font-italic {
   font-style: italic !important; }
@@ -8038,7 +8031,8 @@ a.text-blue:hover, a.text-blue:focus {
 
 .card-title,
 .card-header {
-  margin-top: 0; }
+  margin-top: 0;
+  font-weight: 500; }
 
 .card-disabled {
   position: absolute;
@@ -8267,7 +8261,9 @@ input.form-control[type="range"] {
     color: #fff !important; }
 
 .nav-tabs > li > a, .nav-pills > li > a {
-  color: #6c757d;
+  color: #6c757d; }
+
+.nav-tabs > li > a.active, .nav-pills > li > a.active {
   font-weight: 600; }
 
 .nav-pills > a {
@@ -8397,7 +8393,7 @@ h4,
 h5,
 h6 {
   margin: 10px 0;
-  font-family: "Cerebri Sans,sans-serif";
+  font-family: "Galano Grotesque";
   color: #343a40; }
 
 .font-11 {

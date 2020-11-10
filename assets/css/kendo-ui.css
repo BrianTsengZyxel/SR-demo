@@ -628,44 +628,6 @@ kendo-sortable {
 .k-fx-tile.k-fx-right.k-fx-reverse.k-fx-end .k-fx-next {
   transform: translateX(0%); }
 
-.k-fx-tile.k-fx-start .k-fx-next {
-  will-change: transform;
-  transform: translateX(100%); }
-
-.k-fx-tile.k-fx-end .k-fx-current {
-  transform: translateX(-100%); }
-
-.k-fx-tile.k-fx-reverse.k-fx-start .k-fx-current {
-  will-change: transform;
-  transform: translateX(0); }
-
-.k-fx-tile.k-fx-reverse.k-fx-end .k-fx-current {
-  transform: translateX(100%); }
-
-.k-fx-tile.k-fx-reverse.k-fx-start .k-fx-next {
-  transform: translateX(-100%); }
-
-.k-fx-tile.k-fx-reverse.k-fx-end .k-fx-next {
-  transform: translateX(0); }
-
-.k-fx-tile.k-fx-right.k-fx-start .k-fx-next {
-  transform: translateX(-100%); }
-
-.k-fx-tile.k-fx-right.k-fx-end .k-fx-current {
-  transform: translateX(100%); }
-
-.k-fx-tile.k-fx-right.k-fx-reverse.k-fx-start .k-fx-current {
-  transform: translateX(0); }
-
-.k-fx-tile.k-fx-right.k-fx-reverse.k-fx-end .k-fx-current {
-  transform: translateX(-100%); }
-
-.k-fx-tile.k-fx-right.k-fx-reverse.k-fx-start .k-fx-next {
-  transform: translateX(100%); }
-
-.k-fx-tile.k-fx-right.k-fx-reverse.k-fx-end .k-fx-next {
-  transform: translateX(0%); }
-
 .k-fx.k-fx-overlay.k-fx-start .k-fx-next,
 .k-fx.k-fx-overlay.k-fx-left.k-fx-start .k-fx-next {
   will-change: transform;
@@ -2038,7 +2000,7 @@ kendo-sortable {
   font-weight: 400 !important; }
 
 .k-font-weight-bold {
-  font-weight: 700 !important; }
+  font-weight: 500 !important; }
 
 .k-flip-h {
   transform: scaleX(-1); }
@@ -5013,7 +4975,7 @@ kendo-sortable {
   display: inline-block; }
 
 .k-typography {
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   font-weight: 400; }
@@ -5090,7 +5052,7 @@ kendo-sortable {
 
 .k-avatar-text,
 .k-avatar-initials {
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5; }
 
@@ -6141,7 +6103,7 @@ kendo-badge-container {
   border-style: solid;
   font-size: 0.875rem;
   line-height: 1.5;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -6589,6 +6551,135 @@ kendo-badge-container {
     background-color: #6c757d;
     opacity: 0.1; }
 
+.k-input {
+  margin: 0;
+  padding: 0.45rem 0.9rem;
+  width: 100%;
+  min-width: 0;
+  height: calc( 1.5em + 0.9rem);
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+  color: inherit;
+  background: none;
+  font: inherit;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  flex: 0 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-appearance: none; }
+  .k-input::-ms-clear {
+    display: none; }
+  .k-input:-ms-input-placeholder {
+    color: #adb5bd;
+    opacity: 1;
+    -ms-user-select: none;
+        user-select: none; }
+  .k-input::placeholder {
+    color: #adb5bd;
+    opacity: 1;
+    -webkit-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+  .k-input:-ms-input-placeholder {
+    color: #adb5bd; }
+  .k-input:invalid {
+    box-shadow: none; }
+
+.k-space-left {
+  padding-left: 1.9em; }
+  .k-space-left > .k-icon {
+    margin: -8px 0 0;
+    position: absolute;
+    top: 50%;
+    left: 3px; }
+
+.k-space-right {
+  padding-right: 1.9em; }
+  .k-space-right > .k-icon {
+    margin: -8px 0 0;
+    position: absolute;
+    top: 50%;
+    right: 3px; }
+
+.k-input-prefix,
+.k-input-suffix {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: calc( 1.5em + 0.9rem); }
+  .k-input-prefix > *,
+  .k-input-suffix > * {
+    flex-shrink: 0; }
+  .k-input-prefix > .k-icon,
+  .k-input-prefix .k-clear-value > .k-icon,
+  .k-input-suffix > .k-icon,
+  .k-input-suffix .k-clear-value > .k-icon {
+    width: calc( 1.5em + 0.9rem);
+    height: calc( 1.5em + 0.9rem);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
+
+.k-input-icon {
+  width: calc( 16px + 0.9rem);
+  height: calc( 1.3125rem + 0.9rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; }
+  .k-ie9 .k-input-icon {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0; }
+  .k-ie9 .k-rtl .k-input-icon, .k-ie9
+  [dir="rtl"] .k-input-icon {
+    left: 0;
+    right: auto; }
+
+.k-clear-value {
+  cursor: pointer; }
+
+.k-searchbar {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row nowrap; }
+
+.k-text-disabled {
+  outline: none;
+  cursor: default;
+  opacity: 0.65;
+  filter: grayscale(0.1);
+  pointer-events: none;
+  box-shadow: none; }
+
+@keyframes autoFillStart {
+  from { }
+  to { } }
+
+@keyframes autoFillEnd {
+  from { }
+  to { } }
+
+.k-autofill:-webkit-autofill {
+  animation-name: autoFillStart; }
+
+.k-autofill:not(:-webkit-autofill) {
+  animation-name: autoFillEnd; }
+
+.k-textbox:-webkit-autofill {
+  animation-name: autoFillStart; }
+
+.k-textbox:not(:-webkit-autofill) {
+  animation-name: autoFillEnd; }
+
+.k-textbox {
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
+
 .k-popup {
   border-radius: 0.25rem;
   margin: 0;
@@ -6740,7 +6831,6 @@ kendo-badge-container {
   display: block;
   position: relative;
   padding: 1.5rem;
-  min-height: calc( 3rem + 1.5em + 0.9rem);
   box-sizing: border-box;
   flex: 1 0 auto; }
   .k-list-filter > .k-textbox {
@@ -6962,9 +7052,6 @@ kendo-badge-container {
   .k-list-optionlabel.k-state-focused.k-state-selected {
     box-shadow: inset 0 0 0 3px rgba(50, 58, 70, 0.15); }
 
-.k-list-container .k-list-optionlabel {
-  border-bottom-color: #ced4da; }
-
 .k-list-container .k-button:focus,
 .k-list-container .k-button.k-state-focused {
   box-shadow: inset 0 0 0 3px rgba(50, 58, 70, 0.15); }
@@ -6989,7 +7076,7 @@ kendo-badge-container {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   list-style: none;
@@ -7107,26 +7194,47 @@ kendo-toolbar-renderer {
   .k-toolbar .k-overflow-anchor {
     color: inherit;
     background: transparent; }
-  .k-toolbar .k-state-border-up,
-  .k-toolbar .k-state-border-down {
-    box-shadow: none; }
-    .k-toolbar .k-state-border-up::before,
-    .k-toolbar .k-state-border-up .k-button::before,
-    .k-toolbar .k-state-border-down::before,
-    .k-toolbar .k-state-border-down .k-button::before {
-      opacity: 0; }
   .k-toolbar .k-separator {
     border-color: inherit; }
   .k-toolbar .k-button.k-state-disabled::after {
     opacity: 0; }
-  .k-toolbar .k-combobox .k-state-border-up,
-  .k-toolbar .k-combobox .k-state-border-down {
-    box-shadow: none; }
 
 .k-form,
 .k-form-inline {
   font-size: 0.875rem;
   line-height: 1.5; }
+
+.k-fieldset {
+  margin: 30px;
+  border-width: 1px 0 0;
+  border-style: solid;
+  padding: 25px 0 0; }
+  .k-fieldset > legend {
+    margin-left: 0;
+    padding: 0 1.5rem 0 0;
+    text-transform: uppercase; }
+
+kendo-label > .k-label {
+  margin: 0; }
+
+.k-label-optional {
+  margin-left: 6px;
+  font-size: 12px;
+  font-style: italic;
+  align-self: center; }
+
+.k-label-empty::before {
+  content: "";
+  display: inline-block; }
+
+.k-input-label {
+  margin-right: 10px;
+  z-index: 1; }
+  .k-input-label:dir(rtl),
+  .k-rtl .k-input-label, .k-input-label.k-rtl,
+  [dir="rtl"] .k-input-label, .k-input-label[dir="rtl"] {
+    margin-right: 0;
+    margin-left: 10px; }
 
 .k-form {
   border: 0; }
@@ -8128,7 +8236,7 @@ kendo-label.k-radio-label > .k-label:first-child {
   display: inline-flex;
   overflow: hidden;
   vertical-align: middle;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.65625rem;
   line-height: 1.5;
   -webkit-user-select: none;
@@ -8247,7 +8355,7 @@ kendo-label.k-radio-label > .k-label:first-child {
 
 .k-switch-off .k-switch-container {
   color: black;
-  background-color: #fff; }
+  background-color: #6c757d; }
 
 .k-switch-off .k-switch-handle {
   color: black;
@@ -8255,7 +8363,7 @@ kendo-label.k-radio-label > .k-label:first-child {
 
 .k-switch-off:hover .k-switch-container, .k-switch-off.k-state-hover .k-switch-container {
   color: black;
-  background-color: #6c757d; }
+  background-color: #5a6268; }
 
 .k-switch-off:hover .k-switch-handle, .k-switch-off.k-state-hover .k-switch-handle {
   color: black;
@@ -8278,7 +8386,7 @@ kendo-label.k-radio-label > .k-label:first-child {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: block;
@@ -8303,7 +8411,7 @@ kendo-label.k-radio-label > .k-label:first-child {
     border: 0;
     box-sizing: border-box;
     outline: 0;
-    font-family: "Nunito", sans-serif;
+    font-family: "Galano Grotesque";
     font-size: 0.875rem;
     line-height: 1.5;
     display: flex;
@@ -8758,7 +8866,7 @@ kendo-label.k-radio-label > .k-label:first-child {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.65625rem;
   line-height: 1;
   display: inline-grid;
@@ -9106,175 +9214,10 @@ kendo-label.k-radio-label > .k-label:first-child {
 .k-actions-stretched {
   border-color: #e3e6eb; }
 
-.k-input {
-  margin: 0;
-  padding: 0.45rem 0.9rem;
-  width: 100%;
-  min-width: 0;
-  height: calc( 1.5em + 0.9rem);
-  border: 0;
-  outline: 0;
-  box-sizing: border-box;
-  box-shadow: none;
-  color: inherit;
-  background: none;
-  font: inherit;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  flex: 0 1 auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-appearance: none; }
-  .k-input::-ms-clear {
-    display: none; }
-  .k-input:-ms-input-placeholder {
-    color: #adb5bd;
-    opacity: 1;
-    -ms-user-select: none;
-        user-select: none; }
-  .k-input::-ms-input-placeholder {
-    color: #adb5bd;
-    opacity: 1;
-    -ms-user-select: none;
-        user-select: none; }
-  .k-input::placeholder {
-    color: #adb5bd;
-    opacity: 1;
-    -webkit-user-select: none;
-        -ms-user-select: none;
-            user-select: none; }
-  .k-input:-ms-input-placeholder {
-    color: #adb5bd; }
-  .k-input:invalid {
-    box-shadow: none; }
-
-.k-space-left {
-  padding-left: 1.9em; }
-  .k-space-left > .k-icon {
-    margin: -8px 0 0;
-    position: absolute;
-    top: 50%;
-    left: 3px; }
-
-.k-space-right {
-  padding-right: 1.9em; }
-  .k-space-right > .k-icon {
-    margin: -8px 0 0;
-    position: absolute;
-    top: 50%;
-    right: 3px; }
-
-.k-input-prefix,
-.k-input-suffix {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  height: calc( 1.5em + 0.9rem); }
-  .k-input-prefix > *,
-  .k-input-suffix > * {
-    flex-shrink: 0; }
-  .k-input-prefix > .k-icon,
-  .k-input-prefix .k-clear-value > .k-icon,
-  .k-input-suffix > .k-icon,
-  .k-input-suffix .k-clear-value > .k-icon {
-    width: calc( 1.5em + 0.9rem);
-    height: calc( 1.5em + 0.9rem);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center; }
-
-.k-input-icon {
-  width: calc( 16px + 0.9rem);
-  height: calc( 1.3125rem + 0.9rem);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0; }
-  .k-ie9 .k-input-icon {
-    position: absolute;
-    height: 100%;
-    right: 0;
-    top: 0; }
-  .k-ie9 .k-rtl .k-input-icon, .k-ie9
-  [dir="rtl"] .k-input-icon {
-    left: 0;
-    right: auto; }
-
-.k-clear-value {
-  cursor: pointer; }
-
-.k-searchbar {
-  flex: 1 1 auto;
-  display: flex;
-  flex-flow: row nowrap; }
-
-.k-fieldset {
-  margin: 30px;
-  border-width: 1px 0 0;
-  border-style: solid;
-  padding: 25px 0 0; }
-  .k-fieldset > legend {
-    margin-left: 0;
-    padding: 0 1.5rem 0 0;
-    text-transform: uppercase; }
-
-kendo-label > .k-label {
-  margin: 0; }
-
-.k-label-optional {
-  margin-left: 6px;
-  font-size: 12px;
-  font-style: italic;
-  align-self: center; }
-
-.k-label-empty::before {
-  content: "";
-  display: inline-block; }
-
-.k-text-disabled {
-  outline: none;
-  cursor: default;
-  opacity: 0.65;
-  filter: grayscale(0.1);
-  pointer-events: none;
-  box-shadow: none; }
-
-.k-input-label {
-  margin-right: 10px;
-  z-index: 1; }
-  .k-input-label:dir(rtl),
-  .k-rtl .k-input-label, .k-input-label.k-rtl,
-  [dir="rtl"] .k-input-label, .k-input-label[dir="rtl"] {
-    margin-right: 0;
-    margin-left: 10px; }
-
-@keyframes autoFillStart {
-  from { }
-  to { } }
-
-@keyframes autoFillEnd {
-  from { }
-  to { } }
-
-.k-autofill:-webkit-autofill {
-  animation-name: autoFillStart; }
-
-.k-autofill:not(:-webkit-autofill) {
-  animation-name: autoFillEnd; }
-
-.k-textbox:-webkit-autofill {
-  animation-name: autoFillStart; }
-
-.k-textbox:not(:-webkit-autofill) {
-  animation-name: autoFillEnd; }
-
-.k-textbox {
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
-
 .k-textbox-container,
 .k-floating-label-container {
-  padding-top: calc( 1.5 * 1em);
+  padding-top: calc( 1.5 * 0.875rem);
+  width: 12.4em;
   display: inline-flex;
   vertical-align: middle;
   position: relative;
@@ -9288,7 +9231,7 @@ kendo-label > .k-label {
     white-space: nowrap;
     text-overflow: ellipsis;
     position: absolute;
-    top: calc( calc( 1.5 * 1em) + 1px + 0.45rem);
+    top: calc( calc( 1.5 * 0.875rem) + 1px + 0.45rem);
     left: calc( 0.9rem + 1px);
     overflow: hidden;
     cursor: text;
@@ -9303,7 +9246,7 @@ kendo-label > .k-label {
     width: auto; }
   .k-textbox-container.k-state-empty > .k-label,
   .k-floating-label-container.k-state-empty > .k-label {
-    top: calc( calc( 1.5 * 1em) + 1px + 0.45rem);
+    top: calc( calc( 1.5 * 0.875rem) + 1px + 0.45rem);
     left: calc( 0.9rem + 1px);
     transform: scale(1); }
   .k-textbox-container > .k-label,
@@ -9316,8 +9259,6 @@ kendo-label > .k-label {
     left: 0;
     transform: scale(1); }
   .k-textbox-container.k-state-empty:not(.k-state-focused) :-ms-input-placeholder, .k-floating-label-container.k-state-empty:not(.k-state-focused) :-ms-input-placeholder {
-    color: transparent; }
-  .k-textbox-container.k-state-empty:not(.k-state-focused) ::-ms-input-placeholder, .k-floating-label-container.k-state-empty:not(.k-state-focused) ::-ms-input-placeholder {
     color: transparent; }
   .k-textbox-container.k-state-empty:not(.k-state-focused) ::placeholder,
   .k-floating-label-container.k-state-empty:not(.k-state-focused) ::placeholder {
@@ -9356,7 +9297,7 @@ kendo-label > .k-label {
   border-width: 1px;
   border-style: solid;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   box-sizing: border-box;
@@ -9371,11 +9312,6 @@ kendo-label > .k-label {
   .k-textbox::-ms-clear {
     display: none; }
   .k-textbox:-ms-input-placeholder {
-    color: #adb5bd;
-    opacity: 1;
-    -ms-user-select: none;
-        user-select: none; }
-  .k-textbox::-ms-input-placeholder {
     color: #adb5bd;
     opacity: 1;
     -ms-user-select: none;
@@ -9445,7 +9381,7 @@ input.k-textbox {
   border-width: 1px;
   border-style: solid;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   box-sizing: border-box;
@@ -9459,11 +9395,6 @@ input.k-textbox {
   .k-textarea::-ms-clear {
     display: none; }
   .k-textarea:-ms-input-placeholder {
-    color: #adb5bd;
-    opacity: 1;
-    -ms-user-select: none;
-        user-select: none; }
-  .k-textarea::-ms-input-placeholder {
     color: #adb5bd;
     opacity: 1;
     -ms-user-select: none;
@@ -9532,7 +9463,7 @@ textarea.k-textarea {
   box-sizing: border-box;
   background-repeat: repeat-x;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: inline-flex;
@@ -9666,7 +9597,7 @@ textarea.k-textarea {
   border-style: solid;
   outline: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   white-space: nowrap;
@@ -9721,7 +9652,7 @@ textarea.k-textarea {
   box-sizing: border-box;
   outline: 0;
   background: none;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   text-align: left;
@@ -9820,7 +9751,7 @@ textarea.k-textarea {
   border-width: 0;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: block;
@@ -10166,7 +10097,7 @@ textarea.k-textarea {
   border-width: 0;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   background: none;
@@ -10265,7 +10196,7 @@ textarea.k-textarea {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -10418,7 +10349,7 @@ textarea.k-textarea {
   border-width: 0;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 0;
   display: inline-block;
@@ -10542,7 +10473,7 @@ textarea.k-textarea {
   box-sizing: border-box;
   outline: 0;
   background: none;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   text-align: left;
@@ -10657,7 +10588,7 @@ textarea.k-textarea {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   position: relative;
@@ -10677,7 +10608,8 @@ textarea.k-textarea {
     white-space: normal;
     cursor: pointer;
     overflow: hidden; }
-  .k-calendar .k-calendar-view table {
+  .k-calendar .k-calendar-view table,
+  .k-calendar .k-calendar-view .k-calendar-table {
     margin: 0;
     border-width: 0;
     border-color: inherit;
@@ -10688,7 +10620,9 @@ textarea.k-textarea {
     position: relative;
     z-index: 1; }
   .k-calendar .k-calendar-view td,
-  .k-calendar .k-calendar-view th {
+  .k-calendar .k-calendar-view th,
+  .k-calendar .k-calendar-view .k-calendar-td,
+  .k-calendar .k-calendar-view .k-calendar-th {
     border-width: 0;
     padding: 0;
     text-align: center;
@@ -10696,13 +10630,15 @@ textarea.k-textarea {
     border-color: inherit;
     font-weight: normal;
     cursor: default; }
-  .k-calendar .k-calendar-view th {
+  .k-calendar .k-calendar-view th,
+  .k-calendar .k-calendar-view .k-calendar-th {
     padding: 0.25rem 0px;
     font-size: 0.7875rem;
     line-height: 2;
     text-transform: uppercase;
     opacity: 0.65; }
-  .k-calendar .k-calendar-view tbody th {
+  .k-calendar .k-calendar-view tbody th,
+  .k-calendar .k-calendar-view .k-calendar-tbody .k-calendar-th {
     padding-left: 0.9rem;
     padding-right: 0.9rem;
     height: 2em;
@@ -10740,7 +10676,8 @@ textarea.k-textarea {
     align-items: center;
     justify-content: space-between;
     flex: 0 0 auto; }
-    .k-calendar-header .k-title {
+    .k-calendar-header .k-title,
+    .k-calendar-header .k-calendar-title {
       font-weight: bold; }
     .k-calendar-header .k-today {
       cursor: pointer;
@@ -10750,6 +10687,8 @@ textarea.k-textarea {
       flex-direction: row;
       align-items: center;
       flex-wrap: nowrap; }
+      .k-calendar-header .k-calendar-nav .k-today {
+        margin: 0 8px; }
   .k-calendar > .k-calendar-header {
     min-width: 280px;
     box-sizing: border-box; }
@@ -10783,11 +10722,15 @@ textarea.k-textarea {
     flex: 1 1 auto;
     position: relative; }
     .k-calendar .k-content > table,
-    .k-calendar .k-calendar-content > table {
+    .k-calendar .k-content > .k-calendar-table,
+    .k-calendar .k-calendar-content > table,
+    .k-calendar .k-calendar-content > .k-calendar-table {
       table-layout: fixed;
       margin-right: -17px; }
     .k-calendar .k-content td,
-    .k-calendar .k-calendar-content td {
+    .k-calendar .k-content .k-calendar-td,
+    .k-calendar .k-calendar-content td,
+    .k-calendar .k-calendar-content .k-calendar-td {
       border-radius: 0.25rem;
       border-color: transparent; }
     .k-calendar .k-content .k-link,
@@ -10812,11 +10755,16 @@ textarea.k-textarea {
     .k-calendar .k-content .k-state-disabled,
     .k-calendar .k-calendar-content .k-state-disabled {
       opacity: 0.65; }
-  .k-calendar table.k-content {
+  .k-calendar table.k-content,
+  .k-calendar table.k-calendar-content,
+  .k-calendar .k-calendar-table.k-content,
+  .k-calendar .k-calendar-table.k-calendar-content {
     display: inline-table;
     vertical-align: top; }
   .k-calendar .k-month td,
-  .k-calendar .k-calendar-monthview td {
+  .k-calendar .k-month .k-calendar-td,
+  .k-calendar .k-calendar-monthview td,
+  .k-calendar .k-calendar-monthview .k-calendar-td {
     width: 45.71429px;
     height: 45.71429px; }
   .k-calendar .k-month .k-link,
@@ -10824,7 +10772,9 @@ textarea.k-textarea {
     width: 45.71429px;
     height: 45.71429px; }
   .k-calendar .k-year td,
-  .k-calendar .k-calendar-yearview td {
+  .k-calendar .k-year .k-calendar-td,
+  .k-calendar .k-calendar-yearview td,
+  .k-calendar .k-calendar-yearview .k-calendar-td {
     width: auto;
     height: auto; }
   .k-calendar .k-year .k-link,
@@ -10832,7 +10782,9 @@ textarea.k-textarea {
     width: 80px;
     height: 80px; }
   .k-calendar .k-decade td,
-  .k-calendar .k-calendar-decadeview td {
+  .k-calendar .k-decade .k-calendar-td,
+  .k-calendar .k-calendar-decadeview td,
+  .k-calendar .k-calendar-decadeview .k-calendar-td {
     width: auto;
     height: auto; }
   .k-calendar .k-decade .k-link,
@@ -10840,7 +10792,9 @@ textarea.k-textarea {
     width: 80px;
     height: 80px; }
   .k-calendar .k-century td,
-  .k-calendar .k-calendar-centuryview td {
+  .k-calendar .k-century .k-calendar-td,
+  .k-calendar .k-calendar-centuryview td,
+  .k-calendar .k-calendar-centuryview .k-calendar-td {
     width: auto;
     height: auto; }
   .k-calendar .k-century .k-link,
@@ -10880,16 +10834,37 @@ textarea.k-textarea {
       width: 100%;
       flex: 0 0 auto; }
     .k-calendar-infinite .k-calendar-yearview .k-content td,
+    .k-calendar-infinite .k-calendar-yearview .k-content .k-calendar-td,
+    .k-calendar-infinite .k-calendar-yearview .k-calendar-content td,
+    .k-calendar-infinite .k-calendar-yearview .k-calendar-content .k-calendar-td,
     .k-calendar-infinite .k-calendar-decadeview .k-content td,
-    .k-calendar-infinite .k-calendar-centuryview .k-content td {
+    .k-calendar-infinite .k-calendar-decadeview .k-content .k-calendar-td,
+    .k-calendar-infinite .k-calendar-decadeview .k-calendar-content td,
+    .k-calendar-infinite .k-calendar-decadeview .k-calendar-content .k-calendar-td,
+    .k-calendar-infinite .k-calendar-centuryview .k-content td,
+    .k-calendar-infinite .k-calendar-centuryview .k-content .k-calendar-td,
+    .k-calendar-infinite .k-calendar-centuryview .k-calendar-content td,
+    .k-calendar-infinite .k-calendar-centuryview .k-calendar-content .k-calendar-td {
       width: auto;
       height: auto; }
     .k-calendar-infinite .k-calendar-yearview .k-content .k-link,
     .k-calendar-infinite .k-calendar-yearview .k-content td.k-empty,
+    .k-calendar-infinite .k-calendar-yearview .k-content .k-calendar-td.k-empty,
+    .k-calendar-infinite .k-calendar-yearview .k-calendar-content .k-link,
+    .k-calendar-infinite .k-calendar-yearview .k-calendar-content td.k-empty,
+    .k-calendar-infinite .k-calendar-yearview .k-calendar-content .k-calendar-td.k-empty,
     .k-calendar-infinite .k-calendar-decadeview .k-content .k-link,
     .k-calendar-infinite .k-calendar-decadeview .k-content td.k-empty,
+    .k-calendar-infinite .k-calendar-decadeview .k-content .k-calendar-td.k-empty,
+    .k-calendar-infinite .k-calendar-decadeview .k-calendar-content .k-link,
+    .k-calendar-infinite .k-calendar-decadeview .k-calendar-content td.k-empty,
+    .k-calendar-infinite .k-calendar-decadeview .k-calendar-content .k-calendar-td.k-empty,
     .k-calendar-infinite .k-calendar-centuryview .k-content .k-link,
-    .k-calendar-infinite .k-calendar-centuryview .k-content td.k-empty {
+    .k-calendar-infinite .k-calendar-centuryview .k-content td.k-empty,
+    .k-calendar-infinite .k-calendar-centuryview .k-content .k-calendar-td.k-empty,
+    .k-calendar-infinite .k-calendar-centuryview .k-calendar-content .k-link,
+    .k-calendar-infinite .k-calendar-centuryview .k-calendar-content td.k-empty,
+    .k-calendar-infinite .k-calendar-centuryview .k-calendar-content .k-calendar-td.k-empty {
       width: 64px;
       height: 64px; }
 
@@ -10900,7 +10875,8 @@ textarea.k-textarea {
   .k-datetime-container .k-calendar {
     border-width: 0; }
 
-.k-calendar .k-content.k-scrollable {
+.k-calendar .k-content.k-scrollable,
+.k-calendar .k-calendar-content.k-scrollable {
   box-sizing: content-box;
   overflow-x: hidden;
   overflow-y: auto;
@@ -10939,7 +10915,8 @@ textarea.k-textarea {
     top: 0; }
   .k-calendar-navigation::after {
     bottom: 0; }
-  .k-calendar-navigation .k-content {
+  .k-calendar-navigation .k-content,
+  .k-calendar-navigation .k-calendar-content {
     background: transparent;
     height: auto;
     position: absolute;
@@ -10947,9 +10924,11 @@ textarea.k-textarea {
     left: 0;
     bottom: 0;
     right: 0; }
-    .k-calendar-navigation .k-content ul {
+    .k-calendar-navigation .k-content ul,
+    .k-calendar-navigation .k-calendar-content ul {
       width: 5em; }
-    .k-calendar-navigation .k-content li {
+    .k-calendar-navigation .k-content li,
+    .k-calendar-navigation .k-calendar-content li {
       height: 2em;
       line-height: 2em;
       cursor: pointer;
@@ -10976,11 +10955,16 @@ textarea.k-textarea {
     white-space: nowrap; }
     .k-calendar.k-calendar-range .k-calendar-view::after {
       display: none; }
-  .k-calendar.k-calendar-range table {
+  .k-calendar.k-calendar-range table,
+  .k-calendar.k-calendar-range .k-calendar-table {
     width: auto; }
-  .k-calendar.k-calendar-range table.k-content {
+  .k-calendar.k-calendar-range table.k-content,
+  .k-calendar.k-calendar-range table.k-calendar-content,
+  .k-calendar.k-calendar-range .k-calendar-table.k-content,
+  .k-calendar.k-calendar-range .k-calendar-table.k-calendar-content {
     padding: 0px 1.5rem; }
-  .k-calendar.k-calendar-range table.k-meta-view {
+  .k-calendar.k-calendar-range table.k-meta-view,
+  .k-calendar.k-calendar-range .k-calendar-table.k-meta-view {
     margin: 0 -1px; }
   .k-calendar.k-calendar-range .k-meta-header,
   .k-calendar.k-calendar-range .k-month-header {
@@ -11007,14 +10991,21 @@ textarea.k-textarea {
     flex-direction: row; }
     .k-animation-container-sm .k-calendar.k-calendar-range:not(.k-calendar-infinite) .k-calendar-view {
       flex-direction: column; }
-  .k-calendar.k-calendar-range.k-calendar-infinite table {
+  .k-calendar.k-calendar-range.k-calendar-infinite table,
+  .k-calendar.k-calendar-range.k-calendar-infinite .k-calendar-table {
     padding: 0;
     display: flex;
     flex-direction: row; }
-    .k-calendar.k-calendar-range.k-calendar-infinite table > tbody {
+    .k-calendar.k-calendar-range.k-calendar-infinite table > tbody,
+    .k-calendar.k-calendar-range.k-calendar-infinite table > .k-calendar-tbody,
+    .k-calendar.k-calendar-range.k-calendar-infinite .k-calendar-table > tbody,
+    .k-calendar.k-calendar-range.k-calendar-infinite .k-calendar-table > .k-calendar-tbody {
       display: inline-block;
       vertical-align: top; }
-    .k-calendar.k-calendar-range.k-calendar-infinite table > tbody + tbody {
+    .k-calendar.k-calendar-range.k-calendar-infinite table > tbody + tbody,
+    .k-calendar.k-calendar-range.k-calendar-infinite table > .k-calendar-tbody + .k-calendar-tbody,
+    .k-calendar.k-calendar-range.k-calendar-infinite .k-calendar-table > tbody + tbody,
+    .k-calendar.k-calendar-range.k-calendar-infinite .k-calendar-table > .k-calendar-tbody + .k-calendar-tbody {
       margin-left: 3rem; }
   .k-calendar.k-calendar-range.k-calendar-infinite:not(.k-calendar-minimal) > .k-button {
     border-radius: 0;
@@ -11038,7 +11029,9 @@ textarea.k-textarea {
   transform: scaleX(-1); }
 
 .k-rtl .k-calendar .k-content.k-scrollable,
-.k-calendar[dir="rtl"] .k-content.k-scrollable {
+.k-rtl .k-calendar .k-calendar-content.k-scrollable,
+.k-calendar[dir="rtl"] .k-content.k-scrollable,
+.k-calendar[dir="rtl"] .k-calendar-content.k-scrollable {
   padding-right: 100px;
   padding-left: 100px;
   margin-left: -100px;
@@ -11046,13 +11039,19 @@ textarea.k-textarea {
   margin-left: -117px; }
 
 .k-rtl .k-calendar tbody th,
-.k-calendar[dir="rtl"] tbody th {
+.k-rtl .k-calendar .k-calendar-tbody .k-calendar-th,
+.k-calendar[dir="rtl"] tbody th,
+.k-calendar[dir="rtl"] .k-calendar-tbody .k-calendar-th {
   text-align: right; }
 
 .k-rtl .k-calendar .k-content > table,
+.k-rtl .k-calendar .k-content > .k-calendar-table,
 .k-rtl .k-calendar .k-calendar-content > table,
+.k-rtl .k-calendar .k-calendar-content > .k-calendar-table,
 .k-calendar[dir="rtl"] .k-content > table,
-.k-calendar[dir="rtl"] .k-calendar-content > table {
+.k-calendar[dir="rtl"] .k-content > .k-calendar-table,
+.k-calendar[dir="rtl"] .k-calendar-content > table,
+.k-calendar[dir="rtl"] .k-calendar-content > .k-calendar-table {
   margin-right: 0;
   margin-left: -17px; }
 
@@ -11087,9 +11086,11 @@ textarea.k-textarea {
     .k-calendar .k-calendar-header .k-today:hover,
     .k-calendar .k-calendar-header .k-today:focus {
       color: #3827c1; }
-  .k-calendar .k-content .k-today .k-link {
+  .k-calendar .k-content .k-today .k-link,
+  .k-calendar .k-calendar-content .k-today .k-link {
     box-shadow: inset 0 0 0 1px #6658dd; }
-  .k-calendar .k-content .k-today.k-state-focused .k-link {
+  .k-calendar .k-content .k-today.k-state-focused .k-link,
+  .k-calendar .k-calendar-content .k-today.k-state-focused .k-link {
     box-shadow: inset 0 0 0 1px #6658dd, inset 0 0 0 3px rgba(108, 117, 125, 0.5); }
   .k-calendar .k-weekend {
     color: inherit;
@@ -11100,7 +11101,8 @@ textarea.k-textarea {
     pointer-events: none;
     visibility: hidden; }
   .k-calendar .k-state-hover .k-link,
-  .k-calendar td:hover .k-link {
+  .k-calendar td:hover .k-link,
+  .k-calendar .k-calendar-td:hover .k-link {
     border-color: #f3f7f9;
     color: #323a46;
     background-color: #f3f7f9; }
@@ -11193,7 +11195,7 @@ textarea.k-textarea {
   border-width: 0;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   text-align: left;
@@ -11993,7 +11995,7 @@ textarea.k-textarea {
   outline: 0;
   background: none;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   text-align: left;
@@ -12132,7 +12134,7 @@ select.k-dropdown, select.k-dropdowntree {
   box-sizing: border-box;
   outline: 0;
   background: none;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   text-align: left;
@@ -12310,7 +12312,7 @@ select.k-dropdown, select.k-dropdowntree {
   background: none;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: block;
@@ -12347,7 +12349,7 @@ select.k-dropdown, select.k-dropdowntree {
   .k-treeview .k-in {
     border-radius: 0.25rem;
     margin: 0;
-    padding: 0.45rem 0.45rem;
+    padding: 0.375rem 0.375rem;
     border: 1px solid transparent;
     text-decoration: none;
     display: inline-flex;
@@ -12465,7 +12467,7 @@ select.k-dropdown, select.k-dropdowntree {
 
 .k-maskedtextbox {
   width: 12.4em;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   border-width: 0;
@@ -12512,7 +12514,7 @@ select.k-dropdown, select.k-dropdowntree {
   border-radius: 0.2rem;
   border-width: 1px;
   border-style: solid;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: inline-flex;
@@ -12540,12 +12542,65 @@ select.k-dropdown, select.k-dropdowntree {
     pointer-events: none;
     box-shadow: none; }
 
+.k-external-dropzone {
+  height: 220px;
+  display: flex;
+  flex-flow: row nowrap; }
+
+.k-dropzone-inner {
+  padding: 0.5rem 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  font-family: "Galano Grotesque";
+  line-height: 1.5;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer; }
+  .k-dropzone-inner > .k-icon,
+  .k-dropzone-inner .k-dropzone-icon {
+    margin-bottom: 1.5rem;
+    font-size: 48px; }
+  .k-dropzone-inner .k-dropzone-hint {
+    margin-bottom: 0.5rem; }
+  .k-dropzone-inner .k-dropzone-note {
+    font-size: 0.65625rem; }
+
+.k-no-flexbox .k-dropzone-inner {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  height: 100%; }
+
+.k-no-flexbox .k-dropzone-hint,
+.k-no-flexbox .k-dropzone-note {
+  display: block; }
+
+.k-dropzone-inner {
+  border-color: #dee2e6;
+  color: #323a46;
+  background-color: #f3f7f9; }
+  .k-dropzone-inner > .k-icon,
+  .k-dropzone-inner .k-dropzone-icon {
+    color: #b5b8bc; }
+  .k-dropzone-inner .k-dropzone-note {
+    color: #b5b8bc; }
+
+.k-external-dropzone-hover .k-icon,
+.k-external-dropzone-hover .k-dropzone-icon {
+  color: #6658dd; }
+
 .k-upload {
   border-width: 1px;
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   position: relative;
@@ -12572,8 +12627,6 @@ select.k-dropdown, select.k-dropdowntree {
       position: relative;
       flex: 1; }
     .k-upload .k-dropzone .k-upload-status {
-      font-size: 0.875rem;
-      line-height: 1.5;
       font-weight: normal;
       display: flex;
       align-items: center;
@@ -12956,65 +13009,12 @@ select.k-dropdown, select.k-dropdowntree {
   .k-upload.k-state-invalid, .k-upload.ng-invalid.ng-touched, .k-upload.ng-invalid.ng-dirty {
     border-color: #f1556c; }
 
-.k-external-dropzone {
-  height: 220px;
-  display: flex;
-  flex-flow: row nowrap; }
-
-.k-dropzone-inner {
-  padding: 0.5rem 0.5rem;
-  border-width: 1px;
-  border-style: solid;
-  box-sizing: border-box;
-  font-size: 0.875rem;
-  font-family: "Nunito", sans-serif;
-  line-height: 1.5;
-  flex: 1 1 auto;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  cursor: pointer; }
-  .k-dropzone-inner > .k-icon,
-  .k-dropzone-inner .k-dropzone-icon {
-    margin-bottom: 1.5rem;
-    font-size: 48px; }
-  .k-dropzone-inner .k-dropzone-hint {
-    margin-bottom: 0.5rem; }
-  .k-dropzone-inner .k-dropzone-note {
-    font-size: 0.65625rem; }
-
-.k-no-flexbox .k-dropzone-inner {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  width: 100%;
-  height: 100%; }
-
-.k-no-flexbox .k-dropzone-hint,
-.k-no-flexbox .k-dropzone-note {
-  display: block; }
-
-.k-dropzone-inner {
-  border-color: #dee2e6;
-  color: #323a46;
-  background-color: #f3f7f9; }
-  .k-dropzone-inner > .k-icon,
-  .k-dropzone-inner .k-dropzone-icon {
-    color: #b5b8bc; }
-  .k-dropzone-inner .k-dropzone-note {
-    color: #b5b8bc; }
-
-.k-external-dropzone-hover .k-icon,
-.k-external-dropzone-hover .k-dropzone-icon {
-  color: #6658dd; }
-
 .k-listbox {
   width: 12.4em;
   height: 200px;
   border-width: 0;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   vertical-align: top;
@@ -13098,7 +13098,7 @@ li.k-item.k-drag-clue {
   box-sizing: border-box;
   outline: 0;
   background: none;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: inline-flex;
@@ -13178,7 +13178,7 @@ li.k-item.k-drag-clue {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   list-style: none;
@@ -13290,7 +13290,7 @@ li.k-item.k-drag-clue {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -13566,7 +13566,7 @@ li.k-item.k-drag-clue {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: inline-flex;
@@ -13798,7 +13798,7 @@ kendo-drawer .k-drawer-wrapper {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -14019,7 +14019,7 @@ kendo-drawer .k-drawer-wrapper {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.7875rem;
   line-height: 1.5;
   cursor: default;
@@ -14134,7 +14134,7 @@ kendo-drawer .k-drawer-wrapper {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -14247,7 +14247,7 @@ kendo-drawer .k-drawer-wrapper {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -14539,7 +14539,7 @@ kendo-drawer .k-drawer-wrapper {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   list-style: none;
@@ -14659,7 +14659,7 @@ kendo-drawer .k-drawer-wrapper {
   outline: 0;
   font-size: 0.875rem;
   line-height: 1.5;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   display: block;
   position: relative;
   -webkit-touch-callout: none;
@@ -14881,7 +14881,7 @@ kendo-drawer .k-drawer-wrapper {
   outline: 0;
   font-size: 0.875rem;
   line-height: 1.5;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   position: relative;
   color: inherit;
   background: none;
@@ -14959,7 +14959,7 @@ kendo-drawer .k-drawer-wrapper {
   border-color: transparent;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   color: inherit;
@@ -15185,6 +15185,64 @@ kendo-drawer .k-drawer-wrapper {
 .k-tabstrip-right > .k-tabstrip-items .k-item.k-state-active {
   border-left-color: transparent; }
 
+.k-expander {
+  border-width: 0;
+  border-style: solid;
+  box-sizing: border-box;
+  outline: 0;
+  font-family: "Galano Grotesque";
+  font-size: 0.875rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  .k-expander[dir="rtl"] .k-expander-indicator,
+  .k-rtl .k-expander .k-expander-indicator {
+    margin-left: 0;
+    margin-right: calc(0.75rem * 1.5); }
+
+.k-expander-header {
+  padding: 0 0 0.66667rem;
+  border-width: 0 0 2px;
+  border-style: solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; }
+
+.k-expander-spacer {
+  flex: 1 1 auto; }
+
+.k-expander-title {
+  text-transform: uppercase; }
+
+.k-expander-indicator {
+  margin-left: calc(0.75rem * 1.5); }
+
+.k-expander-content {
+  padding: 3rem 1.875rem;
+  overflow: auto; }
+
+.k-expander + .k-expander .k-expander-header {
+  padding-top: 8px; }
+
+.k-expander {
+  border-color: #dee2e6;
+  color: #323a46;
+  background-color: #f5f6f8; }
+
+.k-expander-header {
+  border-color: #323a46;
+  color: #323a46;
+  background-color: #f5f6f8; }
+
+.k-expander-header.k-state-focused {
+  box-shadow: inset 0 0 0 3px rgba(50, 58, 70, 0.15); }
+
+.k-expander-sub-title {
+  opacity: 0.65; }
+
 kendo-card,
 kendo-card-header,
 kendo-card-body,
@@ -15198,7 +15256,7 @@ kendo-card-footer {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -15605,7 +15663,7 @@ kendo-card-footer {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: block;
@@ -15746,19 +15804,24 @@ kendo-card-footer {
   background-color: #f5f6f8; }
 
 .k-splitbar {
-  color: #6c757d;
-  background-color: #f2f2f2; }
-  .k-splitbar:active, .k-splitbar.k-state-focused {
-    color: #ffffff;
-    background: #6658dd; }
+  color: #323a46;
+  background-color: #e3e4e8; }
 
+.k-splitbar:hover,
+.k-splitbar.k-state-hover,
 .k-splitbar-horizontal-hover,
 .k-splitbar-vertical-hover {
-  color: #fff;
-  background-color: #60686f; }
+  color: #323a46;
+  background-color: #dadbdf; }
+
+.k-splitbar:active,
+.k-splitbar.k-state-focus,
+.k-splitbar.k-state-focused {
+  color: #ffffff;
+  background: #6658dd; }
 
 .k-ghost-splitbar {
-  background-color: #60686f; }
+  background-color: #dadbdf; }
 
 .k-tilelayout {
   border-width: 0px;
@@ -15791,7 +15854,7 @@ kendo-card-footer {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -16454,7 +16517,7 @@ div.k-grid-footer {
 .k-edit-cell > .k-widget {
   vertical-align: middle; }
 
-.k-grid .k-grid-edit-row td,
+.k-grid .k-grid-edit-row td:not(.k-hierarchy-cell),
 .k-grid .k-command-cell,
 .k-grid .k-edit-cell {
   padding: calc( 0.85rem - (calc( 1.5em + 0.9rem + 2px) - 1.5em) / 2) 0.85rem; }
@@ -16988,7 +17051,7 @@ div.k-grid-norecords {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   flex-flow: column nowrap;
@@ -17107,7 +17170,7 @@ div.k-grid-norecords {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -18067,7 +18130,7 @@ div.k-grid-norecords {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   -webkit-touch-callout: none;
@@ -18365,7 +18428,7 @@ div.k-grid-norecords {
   border-width: 1px;
   border-style: solid;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -18538,7 +18601,7 @@ div.k-grid-norecords {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -18559,6 +18622,9 @@ table.k-editor {
   table.k-editor td {
     border-color: inherit; }
 
+kendo-editor .k-editor-content {
+  z-index: 1; }
+
 kendo-editor.k-readonly {
   outline: none;
   cursor: default;
@@ -18569,6 +18635,9 @@ kendo-editor.k-readonly {
   kendo-editor.k-readonly > .k-content,
   kendo-editor.k-readonly .k-editor-content {
     pointer-events: auto; }
+  kendo-editor.k-readonly .k-editor-content.k-state-focused {
+    outline-width: 1px;
+    outline-style: dashed; }
 
 .k-editor-inline {
   border-radius: 0.25rem;
@@ -18988,6 +19057,9 @@ kendo-editor.k-readonly {
   color: #323a46;
   background-color: #f5f6f8; }
 
+kendo-editor.k-readonly .k-editor-content.k-state-focused {
+  outline-color: #6c757d; }
+
 .k-editor-inline .k-table,
 .k-editor-inline .k-table td {
   border-color: #cccccc; }
@@ -19030,7 +19102,7 @@ kendo-editor.k-readonly {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   -webkit-touch-callout: none;
@@ -19156,7 +19228,7 @@ kendo-editor.k-readonly {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -19875,7 +19947,7 @@ kendo-editor.k-readonly {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -20874,7 +20946,7 @@ ul.k-scheduler-views li {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   height: 600px;
@@ -21306,7 +21378,7 @@ ul.k-scheduler-views li {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: block;
@@ -21396,7 +21468,7 @@ ul.k-scheduler-views li {
 .k-timeline {
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: block;
@@ -21712,7 +21784,7 @@ ul.k-scheduler-views li {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: flex;
@@ -21890,7 +21962,7 @@ div.k-scrollview {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   position: relative;
@@ -22099,7 +22171,7 @@ div.k-scrollview {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   -webkit-touch-callout: none;
@@ -22306,7 +22378,7 @@ div.k-scrollview {
   border-width: 1px;
   border-style: solid;
   outline: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Galano Grotesque";
   font-size: 0.875rem;
   line-height: 1.5;
   display: block;
@@ -22600,7 +22672,7 @@ div.k-scrollview {
   border-style: solid;
   font-size: 0.875rem;
   line-height: 1.5;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Galano Grotesque"; }
   .k-map .km-scroll-wrapper {
     width: 100%;
     height: 100%;

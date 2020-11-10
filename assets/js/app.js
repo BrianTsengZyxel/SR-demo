@@ -215,24 +215,10 @@ File: Layout
     },
 
     /**
-     * Initilize the left sidebar size based on screen size
-     */
-    LeftSidebar.prototype.initLayout = function() {
-        // in case of small size, activate the small menu
-        if ((this.window.width() >= 768 && this.window.width() <= 1028) || this.body.data('keep-enlarged')) {
-            this.changeSize('condensed');
-        } else {
-            this.changeSize('default');
-        }
-    },
-
-    /**
      * Initilizes the menu
      */
     LeftSidebar.prototype.init = function() {
-        var self = this;
         this.initMenu();
-        this.initLayout();
     },
   
     $.LeftSidebar = new LeftSidebar, $.LeftSidebar.Constructor = LeftSidebar
@@ -285,6 +271,12 @@ function ($) {
             $(this).toggleClass('open');
             $('#navigation').slideToggle(400);
         });
+
+        //Dark Mode
+        var config = this.parent.getConfig()
+        if (config) {
+            $('#dark-mode-check').prop('checked', config.mode === this.parent.darkMode);
+        }
     },
 
     /**
@@ -379,6 +371,12 @@ function ($) {
         });
 
         // overall color scheme
+        $('#dark-mode-check').change(function () {
+            var mode = ($(this).is(":checked")) ? self.layout.darkMode : self.layout.lightMode;
+            self.layout.changeMode(mode);
+        });
+
+        // overall color scheme
         $('input[type=radio][name=color-scheme-mode]').change(function () {
             self.layout.changeMode($(this).val());
         });
@@ -440,9 +438,13 @@ function ($) {
         this.body = $('body'),
         this.window = $(window),
         this.config = {},
+
         // styles
         this.defaultStyle = $(".default-stylesheet"),
-        this.darkStyle = $(".dark-stylesheet");
+        this.darkStyle = $(".dark-stylesheet"),
+
+        this.darkMode = "dark",
+        this.lightMode = "light";
     };
 
     /**
@@ -451,6 +453,10 @@ function ($) {
     LayoutThemeApp.prototype._saveConfig = function(newConfig) {
         this.config = $.extend(this.config, newConfig);
         // NOTE: You can make ajax call here to save preference on server side or localstorage as well
+
+        if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("preference", JSON.stringify(this.config));
+        }
     },
 
     /**
@@ -473,25 +479,35 @@ function ($) {
      * Loads the config - takes from body if available else uses default one
      */
     LayoutThemeApp.prototype.loadConfig = function() {
-        var bodyConfig = JSON.parse(this.body.attr('data-layout') ? this.body.attr('data-layout') : '{}');
-        
         var config = $.extend({}, {
-            mode: "light",
+            mode: this.lightMode,
             width: "fluid",
             menuPosition: 'fixed',
             sidebar: {
-                color: "light",
-                size: "default",
+                color: this.lightMode,
+                size: "condensed",
                 showuser: false
             },
             topbar: {
-                color: "dark"
+                color: this.lightMode
             },
             showRightSidebarOnPageLoad: false
         });
-        if (bodyConfig) {
-            config = $.extend({}, config, bodyConfig);
-        };
+
+        if (typeof(Storage) !== "undefined") {
+            var storedConfig = localStorage.getItem("preference")
+            
+            if (storedConfig !== null){
+                try {
+                    storedConfig = JSON.parse(storedConfig)
+                    config = $.extend({}, config, storedConfig);
+                }
+                catch (e) {
+                    console.warn("Fail to get the stored preference" + e);
+                }                
+            }
+        }
+
         return config;
     },
 
@@ -537,20 +553,20 @@ function ($) {
     LayoutThemeApp.prototype.changeMode = function(mode) {
         // sets the theme
         switch (mode) {
-            case "dark": {
+            case this.darkMode: {
                 this.defaultStyle.attr("disabled", true);
                 this.darkStyle.attr("disabled", false);
 
-                this.leftSidebar.changeColor("dark");
-                this._saveConfig({ mode: mode, sidebar: $.extend({}, this.config.sidebar, { color: 'dark' }) });
+                this.leftSidebar.changeColor(this.darkMode);
+                this._saveConfig({ mode: mode, sidebar: $.extend({}, this.config.sidebar, { color: this.darkMode }) });
                 break;
             }
             default: {
                 this.defaultStyle.attr("disabled", false);
                 this.darkStyle.attr("disabled", true);
 
-                this.leftSidebar.changeColor("light");
-                this._saveConfig({ mode: mode, sidebar: $.extend({}, this.config.sidebar, { color: 'light' }) });
+                this.leftSidebar.changeColor(this.lightMode);
+                this._saveConfig({ mode: mode, sidebar: $.extend({}, this.config.sidebar, { color: this.lightMode }) });
                 break;
             }
         }
@@ -572,9 +588,6 @@ function ($) {
             }
             default: {
                 this.body.attr('data-layout-width', 'fluid');
-                // automatically activating provided size
-                var bodyConfig = JSON.parse(this.body.attr('data-layout') ? this.body.attr('data-layout') : '{}');
-                $.LeftSidebar.changeSize(bodyConfig && bodyConfig.sidebar ? bodyConfig.sidebar.size : "default");
                 this._saveConfig({ width: width });
                 break;
             }
@@ -764,6 +777,12 @@ File: Main Js File
         });   
     },
 
+    Components.prototype.initKendoUI = function () {
+        $(window).on("resize", function() {
+            kendo.resize($(".chart-wrapper"));
+        });
+    },
+
     //initilizing
     Components.prototype.init = function () {
         this.initTooltipPlugin(),
@@ -776,6 +795,7 @@ File: Main Js File
         this.initTippyTooltips();
         this.initShowPassword();
         this.initMultiDropdown();
+        this.initKendoUI();
     },
 
     $.Components = new Components, $.Components.Constructor = Components

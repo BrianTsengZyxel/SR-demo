@@ -1,5 +1,5 @@
 /**
- * SimpleBar.js - v5.1.0
+ * SimpleBar.js - v5.3.0
  * Scrollbars, simpler.
  * https://grsmto.github.io/simplebar/
  *
@@ -378,8 +378,7 @@ function () {
   _proto.initDOM = function initDOM() {
     var _this2 = this;
 
-    var elDocument = getElementDocument(this.el); // make sure this element doesn't have the elements yet
-
+    // make sure this element doesn't have the elements yet
     if (Array.prototype.filter.call(this.el.children, function (child) {
       return child.classList.contains(_this2.classNames.wrapper);
     }).length) {
@@ -725,14 +724,13 @@ function () {
     var t = axis === 'y' ? this.mouseY - scrollbarOffset : this.mouseX - scrollbarOffset;
     var dir = t < 0 ? -1 : 1;
     var scrollSize = dir === -1 ? scrolled - hostSize : scrolled + hostSize;
-    var speed = 40;
 
     var scrollTo = function scrollTo() {
       if (dir === -1) {
         if (scrolled > scrollSize) {
           var _this4$contentWrapper;
 
-          scrolled -= speed;
+          scrolled -= _this4.options.clickOnTrackSpeed;
 
           _this4.contentWrapperEl.scrollTo((_this4$contentWrapper = {}, _this4$contentWrapper[_this4.axis[axis].offsetAttr] = scrolled, _this4$contentWrapper));
 
@@ -742,7 +740,7 @@ function () {
         if (scrolled < scrollSize) {
           var _this4$contentWrapper2;
 
-          scrolled += speed;
+          scrolled += _this4.options.clickOnTrackSpeed;
 
           _this4.contentWrapperEl.scrollTo((_this4$contentWrapper2 = {}, _this4$contentWrapper2[_this4.axis[axis].offsetAttr] = scrolled, _this4$contentWrapper2));
 
@@ -804,10 +802,21 @@ function () {
     });
     this.el.removeEventListener('mousemove', this.onMouseMove);
     this.el.removeEventListener('mouseleave', this.onMouseLeave);
-    this.contentWrapperEl.removeEventListener('scroll', this.onScroll);
+
+    if (this.contentWrapperEl) {
+      this.contentWrapperEl.removeEventListener('scroll', this.onScroll);
+    }
+
     elWindow.removeEventListener('resize', this.onWindowResize);
-    this.mutationObserver.disconnect();
-    this.resizeObserver.disconnect(); // Cancel all debounced functions
+
+    if (this.mutationObserver) {
+      this.mutationObserver.disconnect();
+    }
+
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect();
+    } // Cancel all debounced functions
+
 
     this.recalculate.cancel();
     this.onMouseMove.cancel();
@@ -850,6 +859,7 @@ SimpleBar.defaultOptions = {
   autoHide: true,
   forceVisible: false,
   clickOnTrack: true,
+  clickOnTrackSpeed: 40,
   classNames: {
     contentEl: 'simplebar-content',
     contentWrapper: 'simplebar-content-wrapper',

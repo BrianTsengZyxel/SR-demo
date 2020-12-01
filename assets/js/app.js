@@ -1,3 +1,226 @@
+!(function($) {
+    "use strict";
+
+    $.fn.customDateRangePicker = function(options) {
+        var self = this;
+        var settings;        
+
+        function initSettings(options) {
+            settings = $.extend({
+                autoUpdateInput: true,
+                alwaysShowCalendars: true,
+                timePicker: true,
+                timePicker24Hour: true,
+                timePickerIncrement: 10,
+                locale: { format: 'YYYY-MM-DD HH:mm' },
+                
+                //need custom parameter
+                period: 'day',
+                utcStart: null,
+                utcEnd: null,
+                customMaxDays: 7,
+                isNeedTimeOffset: true,
+                timeOffset: 0
+            }, options);
+        }
+
+        function initDeviceTime() {
+            settings.deviceTime = moment().set({second:0, millisecond:0});
+            settings.deviceTime = _convertLocalDateToDeviceDate(settings.deviceTime);
+        }
+
+        function initMinDateMaxDate() {
+            settings.maxDate = _calculateRoundTime(settings.deviceTime);
+            settings.minDate = moment(settings.maxDate).subtract(settings.customMaxDays, 'days');
+        }
+
+        function initStartDateEndDate() {
+            if (settings.utcStart) {
+                if (moment(settings.utcStart).isBefore(settings.minDate)) {
+                    settings.startDate = settings.minDate;
+                } else {
+                    settings.startDate = moment(settings.utcStart);
+                }
+
+                if (moment(settings.utcEnd).isBefore(settings.minDate)) {
+                    settings.endDate = settings.minDate;
+                } else {
+                    settings.endDate = moment(settings.utcEnd);
+                }
+            } else {
+                if (settings.period === 'month') {
+                    settings.startDate = moment(settings.maxDate).subtract(settings.customMaxDays, 'days');
+                    settings.endDate = moment(settings.maxDate);
+                } else if (settings.period === 'week') {
+                    settings.startDate = moment(settings.maxDate).subtract(7, 'days');
+                    settings.endDate = moment(settings.maxDate);
+                } else if (settings.period === 'day') {
+                    settings.startDate = moment(settings.maxDate).subtract(24, 'hours');
+                    settings.endDate = moment(settings.maxDate);
+                } else if (settings.period === 'hour') {
+                    settings.startDate = moment(settings.maxDate).subtract(1, 'hours');
+                    settings.endDate = moment(settings.maxDate);
+                }
+            }
+        }        
+
+        function initRanges() {
+            if (settings.customMaxDays === 7) {
+                settings.ranges = {
+                    'Last hour': [moment(settings.maxDate).subtract(1, 'hours'), moment(settings.maxDate)],
+                    'Last 24 hours': [moment(settings.maxDate).subtract(24, 'hours'), moment(settings.maxDate)],
+                    'Last 7 days': [moment(settings.maxDate).subtract(7, 'days'), moment(settings.maxDate)]
+                };
+            } else if (settings.customMaxDays === 30) {
+                settings.ranges = {
+                    'Last hour': [moment(settings.maxDate).subtract(1, 'hours'), moment(settings.maxDate)],
+                    'Last 24 hours': [moment(settings.maxDate).subtract(24, 'hours'), moment(settings.maxDate)],
+                    'Last 7 days': [moment(settings.maxDate).subtract(7, 'days'), moment(settings.maxDate)],
+                    'Last 30 days': [moment(settings.maxDate).subtract(30, 'days'), moment(settings.maxDate)]
+                };
+            } else {
+                settings.ranges = {
+                    'Last hour': [moment(settings.maxDate).subtract(1, 'hours'), moment(settings.maxDate)],
+                    'Last 24 hours': [moment(settings.maxDate).subtract(24, 'hours'), moment(settings.maxDate)]
+                };
+            }
+        }
+
+        function refreshMinDateMaxDate(target, deviceTime) {
+            target.maxDate = _calculateRoundTime(deviceTime);
+            target.minDate = moment(settings.maxDate).subtract(settings.customMaxDays, 'days');
+        }
+
+        function refreshStartDateEndDate(target, deviceTime) {
+            var customRange = true;
+            var format = target.timePickerSeconds ? "YYYY-MM-DD HH:mm:ss" : "YYYY-MM-DD HH:mm";
+
+            for (var range in target.ranges) {
+                if (target.timePicker) {
+                    if (target.startDate.format(format) == target.ranges[range][0].format(format) && target.endDate.format(format) == target.ranges[range][1].format(format)) {
+                        customRange = false;
+                        break;
+                    }
+                } else {
+                    if (target.startDate.format('YYYY-MM-DD') == target.ranges[range][0].format('YYYY-MM-DD') && target.endDate.format('YYYY-MM-DD') == target.ranges[range][1].format('YYYY-MM-DD')) {
+                        customRange = false;
+                        break;
+                    }
+                }
+            }
+
+            if (!customRange) {
+                var deviceTimeOffset = _calculateRoundTime(deviceTime);
+                var offset = deviceTimeOffset - target.endDate;
+
+                target.endDate = moment(deviceTimeOffset);
+                target.startDate = moment(target.startDate + offset);
+            }
+
+            validateStartDateEndDate(target);
+        }
+
+        function validateStartDateEndDate(target) {
+            if (target.startDate.isBefore(moment(target.minDate))) {
+                target.setStartDate(target.minDate);
+            }
+
+            if (target.endDate.isBefore(target.minDate)) {
+                target.setEndDate(target.maxDate);
+            }
+        }
+
+        function refreshRanges(target) {
+            if (settings.customMaxDays === 7) {
+                target.ranges = {
+                    'Last hour': [moment(target.maxDate).subtract(1, 'hours'), moment(target.maxDate)],
+                    'Last 24 hours': [moment(target.maxDate).subtract(24, 'hours'), moment(target.maxDate)],
+                    'Last 7 days': [moment(target.maxDate).subtract(7, 'days'), moment(target.maxDate)]
+                };
+            } else if (settings.customMaxDays === 30) {
+                target.ranges = {
+                    'Last hour': [moment(target.maxDate).subtract(1, 'hours'), moment(target.maxDate)],
+                    'Last 24 hours': [moment(target.maxDate).subtract(24, 'hours'), moment(target.maxDate)],
+                    'Last 7 days': [moment(target.maxDate).subtract(7, 'days'), moment(target.maxDate)],
+                    'Last 30 days': [moment(target.maxDate).subtract(30, 'days'), moment(target.maxDate)]
+                };
+            } else {
+                target.ranges = {
+                    'Last hour': [moment(target.maxDate).subtract(1, 'hours'), moment(target.maxDate)],
+                    'Last 24 hours': [moment(target.maxDate).subtract(24, 'hours'), moment(target.maxDate)]
+                };
+            }
+        }
+        
+        function _calculateRoundTime(time) {
+            var timePickerIncrement = 10;
+            var timeUnix = Math.ceil(moment(time).unix() / (timePickerIncrement * 60)) * timePickerIncrement * 60;
+
+            return moment.unix(timeUnix);
+        }
+
+        function _convertLocalDateToDeviceDate(browserTime) {
+            var browserOffset = moment().utcOffset();
+            var deviceTime = browserTime;
+
+            if (settings.isNeedTimeOffset) {
+                deviceTime = moment(browserTime).add(settings.timeOffset - browserOffset, 'minutes');
+            }
+
+            return deviceTime;
+        }
+
+        function _convertDeviceDateToLocalDate(deviceTime) {
+            var browserOffset = moment().utcOffset();
+            var localTime = deviceTime;
+            
+            if (settings.isNeedTimeOffset) {
+                localTime = moment(deviceTime).subtract(settings.timeOffset - browserOffset, 'minutes');
+            }
+
+            return localTime;
+        }
+
+        function execute() {
+            initSettings(options);
+            initDeviceTime();
+            initMinDateMaxDate();
+            initStartDateEndDate();
+            initRanges();
+            
+            self.daterangepicker(
+                settings
+            ).on("apply.daterangepicker", function(event, picker) {
+                var deviceTime = moment().set({second:0, millisecond:0});
+                deviceTime = _convertLocalDateToDeviceDate(deviceTime);
+
+                refreshMinDateMaxDate(picker, deviceTime);
+                refreshStartDateEndDate(picker, deviceTime);
+                refreshRanges(picker);
+                
+                var startDate = _convertDeviceDateToLocalDate(picker.startDate);
+                var endDate = _convertDeviceDateToLocalDate(picker.endDate);
+                $(this).trigger("custom.apply", [startDate, endDate]);
+
+                $(this).find("span").html(picker.chosenLabel);
+            }).on('showCalendar.daterangepicker', function(event, picker) {
+                var deviceTime = moment().set({second:0, millisecond:0});
+                deviceTime = _convertLocalDateToDeviceDate(deviceTime);
+
+                refreshMinDateMaxDate(picker, deviceTime);
+                validateStartDateEndDate(picker);
+            }).on('show.daterangepicker', function(event, picker) {
+                var deviceTime = moment().set({second:0, millisecond:0});
+                deviceTime = _convertLocalDateToDeviceDate(deviceTime);
+
+                refreshMinDateMaxDate(picker, deviceTime);
+                validateStartDateEndDate(picker);
+            });
+        }
+
+        execute();
+    }
+}(jQuery));
 /*
 Template Name: Ubold - Responsive Bootstrap 4 Admin Dashboard
 Author: CoderThemes
@@ -251,20 +474,7 @@ function ($) {
             $('#search-dropdown').removeClass('d-block');
         });
 
-        //activate the menu in topbar(horizontal menu) based on url
-        $(".navbar-nav a").each(function () {
-            var pageUrl = window.location.href.split(/[?#]/)[0];
-            if (this.href == pageUrl) { 
-                $(this).addClass("active");
-                $(this).parent().addClass("active");
-                $(this).parent().parent().addClass("active");
-                $(this).parent().parent().parent().addClass("active");
-                $(this).parent().parent().parent().parent().addClass("active");
-                var el = $(this).parent().parent().parent().parent().addClass("active").prev();
-                if (el.hasClass("nav-link"))
-                    el.addClass('active');
-            }
-        });
+        MyZyxelEntry.init('myzyxel-entry');
 
         // Topbar - main menu
         $('.navbar-toggle').on('click', function (event) {
@@ -277,6 +487,43 @@ function ($) {
         if (config) {
             $('#dark-mode-check').prop('checked', config.mode === this.parent.darkMode);
         }
+
+        // Kendo Dropdownlist
+        $(".organization-select").kendoDropDownList({
+            dataTextField: "text",
+            dataValueField: "value",
+            template: '<span class="pr-1"><img src="assets/images/nebula_icon.svg"></span> #:data.text#',
+            valueTemplate: '<span class="pr-1"><img src="assets/images/nebula_icon.svg"></span> #:data.text#',
+            dataSource: [{
+                text: "SVD Demo",
+                value: "SVD Demo",
+                deploy_type: "ncc",
+                group_name: "ncc"
+            }, {
+                text: "Taipei",
+                value: "Taipei",
+                deploy_type: "ncc",
+                group_name: "ncc"
+            }]
+        }).data("kendoDropDownList");
+    
+        $(".site-select").kendoDropDownList({
+            dataTextField: "text",
+            dataValueField: "value",
+            template: '<span class="pr-1"><img src="assets/images/nebula_icon.svg"></span> #:data.text#',
+            valueTemplate: '<span class="pr-1"><img src="assets/images/nebula_icon.svg"></span> #:data.text#',
+            dataSource: [{
+                text: "Hsinchu Office",
+                value: "Hsinchu Office",
+                deploy_type: "ncc",
+                group_name: "ncc"
+            }, {
+                text: "Taipei Office",
+                value: "Taipei Office",
+                deploy_type: "ncc",
+                group_name: "ncc"
+            }]
+        }).data("kendoDropDownList");
     },
 
     /**
